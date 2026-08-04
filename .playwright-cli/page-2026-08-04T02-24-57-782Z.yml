@@ -1,0 +1,10 @@
+- generic [ref=e1]:
+  - generic:
+    - generic: Jasper
+    - generic: Cadet — you made it. On behalf of the entire Mission HydroSci team, congratulations. What you accomplished out there wasn't easy, and every one of us has something to say about it. So let's take a moment to look back at the journey — together.
+  - generic [ref=e3]:
+    - button "↻ Replay" [ref=e4] [cursor=pointer]
+    - button "Next ▶" [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

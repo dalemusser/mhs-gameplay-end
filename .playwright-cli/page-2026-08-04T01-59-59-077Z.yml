@@ -1,0 +1,10 @@
+- generic [ref=e1]:
+  - generic:
+    - generic: Anderson
+    - generic: When we headed into the field, I wasn't sure what to expect. But you rolled up your sleeves, gathered your samples, and let the data do the talking. That's exactly how real science gets done. Nicely done.
+  - generic [ref=e3]:
+    - button "↻ Replay" [ref=e4] [cursor=pointer]
+    - button "Next ▶" [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

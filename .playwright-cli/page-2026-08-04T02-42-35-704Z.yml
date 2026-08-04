@@ -1,0 +1,69 @@
+- generic [ref=e2]:
+  - heading "Mission HydroSci — End-of-Game Ceremony · Test Launcher" [level=1] [ref=e3]
+  - paragraph [ref=e4]:
+    - text: Each card is a fictional student profile (
+    - code [ref=e5]: test-profiles/*.json
+    - text: ", same JSON shape the production score endpoint will return). Click one to watch the ceremony exactly as that student would see it. The chips below each card are computed live by the same condition resolver the ceremony uses, so they show precisely which line variant will play for each scored moment."
+  - generic [ref=e6]:
+    - generic [ref=e7]: happy variant
+    - generic [ref=e8]: gentle variant
+    - generic [ref=e9]: · labels show the designer script's Condition A/B letter
+  - generic [ref=e10]:
+    - link "All High test-profiles/all-high.json Every score above threshold — the full victory-lap ceremony, every happy variant. … ▶ Launch ceremony" [ref=e11] [cursor=pointer]:
+      - /url: ceremony.html?profile=all-high
+      - heading "All High" [level=2] [ref=e12]
+      - generic [ref=e13]: test-profiles/all-high.json
+      - paragraph [ref=e14]: Every score above threshold — the full victory-lap ceremony, every happy variant.
+      - generic [ref=e15]: …
+      - generic [ref=e16]: ▶ Launch ceremony
+    - link "All Low test-profiles/all-low.json Every score below threshold — every gentle variant, encouraging tone throughout. … ▶ Launch ceremony" [ref=e17] [cursor=pointer]:
+      - /url: ceremony.html?profile=all-low
+      - heading "All Low" [level=2] [ref=e18]
+      - generic [ref=e19]: test-profiles/all-low.json
+      - paragraph [ref=e20]: Every score below threshold — every gentle variant, encouraging tone throughout.
+      - generic [ref=e21]: …
+      - generic [ref=e22]: ▶ Launch ceremony
+    - link "Mixed A test-profiles/mixed-a.json Alternating high/low (team-finding high, DANI low, …) — checks mid-show tone shifts. … ▶ Launch ceremony" [ref=e23] [cursor=pointer]:
+      - /url: ceremony.html?profile=mixed-a
+      - heading "Mixed A" [level=2] [ref=e24]
+      - generic [ref=e25]: test-profiles/mixed-a.json
+      - paragraph [ref=e26]: Alternating high/low (team-finding high, DANI low, …) — checks mid-show tone shifts.
+      - generic [ref=e27]: …
+      - generic [ref=e28]: ▶ Launch ceremony
+    - link "Mixed B test-profiles/mixed-b.json The inverse alternation of Mixed A — covers the other half of the variant pairs. … ▶ Launch ceremony" [ref=e29] [cursor=pointer]:
+      - /url: ceremony.html?profile=mixed-b
+      - heading "Mixed B" [level=2] [ref=e30]
+      - generic [ref=e31]: test-profiles/mixed-b.json
+      - paragraph [ref=e32]: The inverse alternation of Mixed A — covers the other half of the variant pairs.
+      - generic [ref=e33]: …
+      - generic [ref=e34]: ▶ Launch ceremony
+    - link "Boundary test-profiles/boundary.json Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs. … ▶ Launch ceremony" [ref=e35] [cursor=pointer]:
+      - /url: ceremony.html?profile=boundary
+      - heading "Boundary" [level=2] [ref=e36]
+      - generic [ref=e37]: test-profiles/boundary.json
+      - paragraph [ref=e38]: Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs.
+      - generic [ref=e39]: …
+      - generic [ref=e40]: ▶ Launch ceremony
+    - link "Partial (through Unit 3) test-profiles/partial.json Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant. … ▶ Launch ceremony" [ref=e41] [cursor=pointer]:
+      - /url: ceremony.html?profile=partial
+      - heading "Partial (through Unit 3)" [level=2] [ref=e42]
+      - generic [ref=e43]: test-profiles/partial.json
+      - paragraph [ref=e44]: Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant.
+      - generic [ref=e45]: …
+      - generic [ref=e46]: ▶ Launch ceremony
+    - link "No Data test-profiles/no-data.json No scores at all (grader lag / never played) — the whole ceremony on fallback variants. … ▶ Launch ceremony" [ref=e47] [cursor=pointer]:
+      - /url: ceremony.html?profile=no-data
+      - heading "No Data" [level=2] [ref=e48]
+      - generic [ref=e49]: test-profiles/no-data.json
+      - paragraph [ref=e50]: No scores at all (grader lag / never played) — the whole ceremony on fallback variants.
+      - generic [ref=e51]: …
+      - generic [ref=e52]: ▶ Launch ceremony
+  - paragraph [ref=e53]:
+    - link "▶ Production default" [ref=e54] [cursor=pointer]:
+      - /url: ceremony.html
+    - text: — no profile parameter; the ceremony fetches real scores (until that endpoint exists, it behaves like No Data).
+    - text: Serve this folder with any static server (e.g.
+    - code [ref=e55]: python3 -m http.server 8000
+    - text: ) — fetches fail over
+    - code [ref=e56]: file://
+    - text: .

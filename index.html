@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHS Ceremony — Test Launcher</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --panel: rgba(10,18,30,0.72); --edge: rgba(90,160,255,0.45); --cyan: #7fd0ff; }
+  html, body { margin: 0; min-height: 100%; background: #05070c; color: #dfe6f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font-size: 24px; margin: 0 0 4px; color: #fff; }
+  h1 .sub { color: var(--cyan); font-weight: 600; }
+  p.lede { color: #8fa2bd; font-size: 14px; line-height: 1.55; max-width: 72ch; margin: 10px 0 28px; }
+  p.lede code { color: #b9d8ff; background: rgba(90,160,255,0.12); padding: 1px 5px; border-radius: 4px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  a.card { display: block; text-decoration: none; color: inherit; background: var(--panel);
+    border: 1px solid var(--edge); border-radius: 14px; padding: 18px 20px 16px;
+    box-shadow: 0 0 18px rgba(40,120,220,0.15), inset 0 0 16px rgba(40,120,220,0.06);
+    transition: border-color .15s, box-shadow .15s, transform .15s; }
+  a.card:hover { border-color: #5b9bff; box-shadow: 0 0 26px rgba(60,140,255,0.35); transform: translateY(-2px); }
+  .card h2 { font-size: 16px; margin: 0 0 2px; color: #fff; }
+  .card .file { font-size: 11px; color: #46566e; margin-bottom: 8px; }
+  .card p { font-size: 13px; color: #8fa2bd; line-height: 1.45; margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; min-height: 24px; }
+  .chip { font-size: 11px; font-weight: 600; letter-spacing: 0.3px; padding: 3px 9px;
+    border-radius: 20px; border: 1px solid; white-space: nowrap; }
+  .chip.happy  { color: #8dffbe; border-color: rgba(90,220,150,0.5);  background: rgba(40,160,90,0.12); }
+  .chip.gentle { color: #ffd88f; border-color: rgba(230,180,90,0.5);  background: rgba(180,130,40,0.12); }
+  .chip.err    { color: #ff9d9d; border-color: rgba(230,110,110,0.5); background: rgba(180,50,50,0.12); }
+  .launch { margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--cyan); }
+
+  .foot { margin-top: 34px; font-size: 13px; color: #8fa2bd; line-height: 1.6; }
+  .foot a { color: var(--cyan); }
+  .legend { display: flex; gap: 10px; align-items: center; margin: 22px 0 14px; font-size: 12px; color: #8fa2bd; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mission HydroSci <span class="sub">— End-of-Game Ceremony · Test Launcher</span></h1>
+  <p class="lede">
+    Each card is a fictional student profile (<code>test-profiles/*.json</code>, same JSON shape the
+    production score endpoint will return). Click one to watch the ceremony exactly as that student
+    would see it. The chips below each card are computed live by the same condition resolver the
+    ceremony uses, so they show precisely which line variant will play for each scored moment.
+  </p>
+
+  <div class="legend">
+    <span class="chip happy">happy variant</span>
+    <span class="chip gentle">gentle variant</span>
+    <span>· labels show the designer script's Condition A/B letter</span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <p class="foot">
+    <a href="ceremony.html">▶ Production default</a> — no profile parameter; the ceremony fetches real
+    scores (until that endpoint exists, it behaves like No&nbsp;Data).<br>
+    Serve this folder with any static server (e.g. <code>python3 -m http.server 8000</code>) —
+    fetches fail over <code>file://</code>.
+  </p>
+</div>
+
+<script src="lib/resolver.js?v=1"></script>
+<script src="ceremony-definition.js?v=1"></script>
+<script>
+const PROFILES = [
+  { file: 'all-high', title: 'All High',
+    desc: 'Every score above threshold — the full victory-lap ceremony, every happy variant.' },
+  { file: 'all-low', title: 'All Low',
+    desc: 'Every score below threshold — every gentle variant, encouraging tone throughout.' },
+  { file: 'mixed-a', title: 'Mixed A',
+    desc: 'Alternating high/low (team-finding high, DANI low, …) — checks mid-show tone shifts.' },
+  { file: 'mixed-b', title: 'Mixed B',
+    desc: 'The inverse alternation of Mixed A — covers the other half of the variant pairs.' },
+  { file: 'boundary', title: 'Boundary',
+    desc: 'Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs.' },
+  { file: 'partial', title: 'Partial (through Unit 3)',
+    desc: 'Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant.' },
+  { file: 'no-data', title: 'No Data',
+    desc: 'No scores at all (grader lag / never played) — the whole ceremony on fallback variants.' },
+];
+
+// friendly names for the conditional sections, in show order
+const SECTION_LABEL = {
+  'u2.find-team': 'Find Team',
+  'u2.dani':      'DANI',
+  'u2.water':     'Water Source',
+  'u3.crates':    'Crates',
+  'u3.garden':    'Garden',
+  'u4.soil':      'Soil',
+};
+
+const grid = document.getElementById('grid');
+
+PROFILES.forEach(async p => {
+  const card = document.createElement('a');
+  card.className = 'card';
+  card.href = 'ceremony.html?profile=' + encodeURIComponent(p.file);
+  card.innerHTML = '<h2>' + p.title + '</h2>'
+    + '<div class="file">test-profiles/' + p.file + '.json</div>'
+    + '<p>' + p.desc + '</p>'
+    + '<div class="chips">…</div>'
+    + '<div class="launch">▶ Launch ceremony</div>';
+  grid.appendChild(card);
+  const chips = card.querySelector('.chips');
+
+  try {
+    const scores = await (await fetch('test-profiles/' + p.file + '.json')).json();
+    const resolved = MHSCeremonyResolver.resolve(window.CEREMONY_DEFINITION, scores);
+    chips.innerHTML = '';
+    for (const [sectionId, label] of Object.entries(SECTION_LABEL)) {
+      const beat = resolved.beats.find(b => b.sectionId === sectionId);
+      if (!beat) continue;
+      const letter = (beat.lineId || '').slice(-1).toUpperCase();     // designer's A/B label
+      const gentle = beat.expression === 'slightly-sad';
+      const chip = document.createElement('span');
+      chip.className = 'chip ' + (gentle ? 'gentle' : 'happy');
+      chip.textContent = label + ' · ' + letter;
+      chip.title = '"' + (beat.text || '').slice(0, 90) + '…"';
+      chips.appendChild(chip);
+    }
+  } catch (e) {
+    chips.innerHTML = '<span class="chip err">profile failed to load</span>';
+  }
+});
+</script>
+</body>
+</html>

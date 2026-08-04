@@ -1,0 +1,15 @@
+{
+  "game": "mhs",
+  "user_id": "000000000000000000000002",
+  "generatedAt": "2026-08-03T00:00:00Z",
+  "currentUnit": "unit5",
+  "items": {
+    "U2.C2": { "score": 0.5, "max": 1.0 },
+    "U2.C3": { "score": 0.5, "max": 1.5 },
+    "U2.C5": { "score": 1.0, "max": 7.0 },
+    "U2.C7": { "score": 1.0, "max": 3.0 },
+    "U3.C1": { "score": 1.0, "max": 3.0 },
+    "U3.C4": { "score": 1.0, "max": 3.0 },
+    "U4.C6": { "score": 1.0, "max": 3.0 }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "words": [
+    {
+      "word": "Your",
+      "start": 0,
+      "end": 0.209
+    },
+    {
+      "word": "hard",
+      "start": 0.267,
+      "end": 0.43
+    },
+    {
+      "word": "work",
+      "start": 0.464,
+      "end": 0.627
+    },
+    {
+      "word": "is",
+      "start": 0.673,
+      "end": 0.755
+    },
+    {
+      "word": "appreciated,",
+      "start": 0.789,
+      "end": 1.44
+    },
+    {
+      "word": "TK!",
+      "start": 1.463,
+      "end": 2.229
+    }
+  ]
+}

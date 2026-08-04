@@ -1,0 +1,81 @@
+{
+  "assignments": [
+    {
+      "character": "Anderson",
+      "voiceId": "tG5bw06DXQnuqEU3nPAq",
+      "voiceName": "Gwen"
+    },
+    {
+      "character": "Aryn",
+      "voiceId": "w4Z9gYJrajAuQmheNbVn",
+      "voiceName": "Haseeb"
+    },
+    {
+      "character": "Jasper",
+      "voiceId": "YsvxlKAiTeA2VGZGnQI9",
+      "voiceName": "Ian"
+    },
+    {
+      "character": "Tera",
+      "voiceId": "98oS1BxL32fKBh1KbTej",
+      "voiceName": "Hannah"
+    },
+    {
+      "character": "Toppo",
+      "voiceId": "zadbHdSgYi0Gxv83seiu",
+      "voiceName": "Amy"
+    },
+    {
+      "character": "DANI",
+      "voiceId": "wzsrSPwFvOZ38ICC2oVf",
+      "voiceName": "Alex"
+    },
+    {
+      "character": "Automated System",
+      "voiceId": "GBv7mTt0atIp3Br8iCZE",
+      "voiceName": "Thomas"
+    },
+    {
+      "character": "Mission Control",
+      "voiceId": "YVom6vJ8eyip50HaF8fc",
+      "voiceName": "Dorian Chase"
+    },
+    {
+      "character": "ABIE",
+      "voiceId": "vBKc2FfBKJfcZNyEt1n6",
+      "voiceName": "Finn"
+    }
+  ],
+  "playerSlots": [
+    {
+      "index": 1,
+      "voiceId": "3XOBzXhnDY98yeWQ3GdM",
+      "voiceName": "Brayden"
+    },
+    {
+      "index": 2,
+      "voiceId": "PoHUWWWMHFrA8z7Q88pu",
+      "voiceName": "Miranda"
+    },
+    {
+      "index": 3,
+      "voiceId": "z5RTzOyJdFDd9rah0KmY",
+      "voiceName": "Yomiee"
+    },
+    {
+      "index": 4,
+      "voiceId": "GCvHMwMlEOnug5ZYBiUw",
+      "voiceName": "Nicoletta"
+    },
+    {
+      "index": 5,
+      "voiceId": "bBcZzZIfBJuKQqB3qXog",
+      "voiceName": "Tass"
+    },
+    {
+      "index": 6,
+      "voiceId": "ETaPGHnbwEZwP0ymNX3Y",
+      "voiceName": "Joey"
+    }
+  ]
+}

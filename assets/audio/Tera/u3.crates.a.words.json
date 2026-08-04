@@ -1,0 +1,149 @@
+{
+  "words": [
+    {
+      "word": "When",
+      "start": 0,
+      "end": 0.174
+    },
+    {
+      "word": "I",
+      "start": 0.209,
+      "end": 0.232
+    },
+    {
+      "word": "needed",
+      "start": 0.29,
+      "end": 0.522
+    },
+    {
+      "word": "help",
+      "start": 0.569,
+      "end": 0.72
+    },
+    {
+      "word": "getting",
+      "start": 0.778,
+      "end": 0.998
+    },
+    {
+      "word": "my",
+      "start": 1.045,
+      "end": 1.126
+    },
+    {
+      "word": "lost",
+      "start": 1.207,
+      "end": 1.44
+    },
+    {
+      "word": "equipment",
+      "start": 1.486,
+      "end": 1.823
+    },
+    {
+      "word": "crates",
+      "start": 1.846,
+      "end": 2.09
+    },
+    {
+      "word": "back",
+      "start": 2.125,
+      "end": 2.264
+    },
+    {
+      "word": "to",
+      "start": 2.299,
+      "end": 2.345
+    },
+    {
+      "word": "my",
+      "start": 2.392,
+      "end": 2.461
+    },
+    {
+      "word": "base,",
+      "start": 2.531,
+      "end": 2.972
+    },
+    {
+      "word": "you",
+      "start": 3.297,
+      "end": 3.402
+    },
+    {
+      "word": "used",
+      "start": 3.495,
+      "end": 3.692
+    },
+    {
+      "word": "what",
+      "start": 3.715,
+      "end": 3.82
+    },
+    {
+      "word": "you",
+      "start": 3.855,
+      "end": 3.924
+    },
+    {
+      "word": "knew",
+      "start": 3.982,
+      "end": 4.11
+    },
+    {
+      "word": "about",
+      "start": 4.156,
+      "end": 4.389
+    },
+    {
+      "word": "surface",
+      "start": 4.447,
+      "end": 4.772
+    },
+    {
+      "word": "water",
+      "start": 4.795,
+      "end": 5.027
+    },
+    {
+      "word": "flow",
+      "start": 5.062,
+      "end": 5.317
+    },
+    {
+      "word": "to",
+      "start": 5.828,
+      "end": 5.944
+    },
+    {
+      "word": "safely",
+      "start": 6.014,
+      "end": 6.339
+    },
+    {
+      "word": "float",
+      "start": 6.397,
+      "end": 6.594
+    },
+    {
+      "word": "them",
+      "start": 6.629,
+      "end": 6.745
+    },
+    {
+      "word": "down",
+      "start": 6.792,
+      "end": 6.954
+    },
+    {
+      "word": "the",
+      "start": 6.989,
+      "end": 7.059
+    },
+    {
+      "word": "river.",
+      "start": 7.094,
+      "end": 7.663
+    }
+  ]
+}

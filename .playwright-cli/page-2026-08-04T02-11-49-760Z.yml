@@ -1,0 +1,10 @@
+- generic [ref=e1]:
+  - generic:
+    - generic: Jasper
+    - generic: but you found our missing team members quickly and helped us get the mission back on track.
+  - generic [ref=e3]:
+    - button "↻ Replay" [ref=e4] [cursor=pointer]
+    - button "Next ▶" [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

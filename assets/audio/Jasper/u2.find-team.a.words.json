@@ -1,0 +1,89 @@
+{
+  "words": [
+    {
+      "word": "but",
+      "start": 0,
+      "end": 0.163
+    },
+    {
+      "word": "you",
+      "start": 0.197,
+      "end": 0.279
+    },
+    {
+      "word": "found",
+      "start": 0.372,
+      "end": 0.557
+    },
+    {
+      "word": "our",
+      "start": 0.592,
+      "end": 0.685
+    },
+    {
+      "word": "missing",
+      "start": 0.731,
+      "end": 0.998
+    },
+    {
+      "word": "team",
+      "start": 1.057,
+      "end": 1.231
+    },
+    {
+      "word": "members",
+      "start": 1.265,
+      "end": 1.556
+    },
+    {
+      "word": "quickly",
+      "start": 1.614,
+      "end": 2.043
+    },
+    {
+      "word": "and",
+      "start": 2.252,
+      "end": 2.438
+    },
+    {
+      "word": "helped",
+      "start": 2.508,
+      "end": 2.74
+    },
+    {
+      "word": "us",
+      "start": 2.798,
+      "end": 2.879
+    },
+    {
+      "word": "get",
+      "start": 2.937,
+      "end": 3.077
+    },
+    {
+      "word": "the",
+      "start": 3.111,
+      "end": 3.181
+    },
+    {
+      "word": "mission",
+      "start": 3.228,
+      "end": 3.518
+    },
+    {
+      "word": "back",
+      "start": 3.587,
+      "end": 3.785
+    },
+    {
+      "word": "on",
+      "start": 3.855,
+      "end": 3.959
+    },
+    {
+      "word": "track.",
+      "start": 4.017,
+      "end": 4.69
+    }
+  ]
+}

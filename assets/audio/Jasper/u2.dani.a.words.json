@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "When",
+      "start": 0,
+      "end": 0.313
+    },
+    {
+      "word": "DANI's",
+      "start": 0.36,
+      "end": 0.697
+    },
+    {
+      "word": "argumentation",
+      "start": 0.731,
+      "end": 1.428
+    },
+    {
+      "word": "system",
+      "start": 1.486,
+      "end": 1.8
+    },
+    {
+      "word": "was",
+      "start": 1.846,
+      "end": 1.95
+    },
+    {
+      "word": "broken,",
+      "start": 1.997,
+      "end": 2.543
+    },
+    {
+      "word": "you",
+      "start": 2.752,
+      "end": 2.856
+    },
+    {
+      "word": "worked",
+      "start": 2.902,
+      "end": 3.111
+    },
+    {
+      "word": "hard",
+      "start": 3.146,
+      "end": 3.332
+    },
+    {
+      "word": "to",
+      "start": 3.367,
+      "end": 3.425
+    },
+    {
+      "word": "restore",
+      "start": 3.495,
+      "end": 3.866
+    },
+    {
+      "word": "it.",
+      "start": 3.913,
+      "end": 4.505
+    }
+  ]
+}
