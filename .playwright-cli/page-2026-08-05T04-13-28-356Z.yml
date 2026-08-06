@@ -1,0 +1,10 @@
+- generic [ref=e1]:
+  - generic:
+    - generic: Toppo
+    - generic: Five highlights build one at a time while this line plays out slowly enough for every item to appear on the panel.
+  - generic [ref=e3]:
+    - button "↻ Replay" [ref=e4] [cursor=pointer]
+    - button "Next ▶" [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

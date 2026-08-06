@@ -10,7 +10,12 @@
  * (built from the mhsaudiotools repo; API key in ~/.elevenlabs_key):
  *
  *     mhsaudio generate -in tools/ceremony-lines.txt -voices tools/voices.json \
+ *         -voice-overrides tools/voice-overrides.json \
  *         -layout babylon-manifest -timestamps -no-cleanup -out assets/audio
+ *
+ * tools/voice-overrides.json holds per-line delivery settings (e.g. u1.intro at
+ * stability 0.60 — Amy kept drifting on the opening "Cadet" at default settings;
+ * 15 default-setting rolls + respelling tests all failed, 0.60 tamed it).
  *
  * -no-cleanup matters: the ceremony lines are clean prose (no game markup), and
  * cleanup would strip em-dashes / split hyphenated words from the SPOKEN text,
@@ -36,8 +41,13 @@ function add(beat, speaker) {
   if (!beat.lineId) throw new Error('beat with text but no lineId: "' + beat.text.slice(0, 40) + '…"');
   const who = beat.speaker || speaker;
   if (!who) throw new Error('beat ' + beat.lineId + ' has no speaker');
-  if (/[\r\n]/.test(beat.text)) throw new Error('beat ' + beat.lineId + ' has a newline in its text');
-  lines.push(beat.lineId + ' | ' + who + ': ' + beat.text);
+  // speakText overrides what the voice says (e.g. punctuation the display must not
+  // show); it must tokenize to the SAME word count as text or karaoke desyncs.
+  const spoken = beat.speakText || beat.text;
+  if (/[\r\n]/.test(spoken)) throw new Error('beat ' + beat.lineId + ' has a newline in its text');
+  if (beat.speakText && beat.speakText.split(/\s+/).length !== beat.text.split(/\s+/).length)
+    throw new Error('beat ' + beat.lineId + ': speakText word count differs from text — karaoke would desync');
+  lines.push(beat.lineId + ' | ' + who + ': ' + spoken);
 }
 
 (def.intro || []).forEach(b => add(b, null));

@@ -1,0 +1,252 @@
+- generic [ref=e2]:
+  - heading "Mission HydroSci — Ceremony Audio Audition" [level=1] [ref=e3]
+  - paragraph [ref=e4]: Every voice line in the current build, in show order (both A and B variants). Click a row to play it — words light up on the clip's own timings, so this also verifies karaoke sync. Rows marked NEW were generated or re-generated in this round.
+  - generic [ref=e5]:
+    - button "▶ Play all NEW in sequence" [ref=e6] [cursor=pointer]
+    - button "▶ Play everything" [ref=e7] [cursor=pointer]
+    - button "■ Stop" [ref=e8] [cursor=pointer]
+  - generic [ref=e9]:
+    - heading "Intro / Unit 1" [level=2] [ref=e10]
+    - generic [ref=e11] [cursor=pointer]:
+      - generic [ref=e12]: ▶
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: u1.intro
+          - generic [ref=e16]: Toppo
+          - generic [ref=e17]: 24.4s
+          - generic [ref=e18]: NEW
+        - generic [ref=e19]: Cadet TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.
+    - heading "Unit 2 — Jasper" [level=2] [ref=e20]
+    - generic [ref=e21] [cursor=pointer]:
+      - generic [ref=e22]: ▶
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: u2.crash
+          - generic [ref=e26]: Jasper
+          - generic [ref=e27]: 4.9s
+          - generic [ref=e28]: NEW
+        - generic [ref=e29]: TK, after the Copernicus crash-landed, our mission could have ended right there.
+    - generic [ref=e30] [cursor=pointer]:
+      - generic [ref=e31]: ▶
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: u2.find-team.a
+          - generic [ref=e35]: Jasper
+          - generic [ref=e36]: 4.7s
+        - generic [ref=e37]: but you found our missing team members quickly and helped us get the mission back on track.
+    - generic [ref=e38] [cursor=pointer]:
+      - generic [ref=e39]: ▶
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: u2.find-team.b
+          - generic [ref=e43]: Jasper
+          - generic [ref=e44]: 4.4s
+        - generic [ref=e45]: but you found the missing team members and helped us get the mission back on track.
+    - generic [ref=e46] [cursor=pointer]:
+      - generic [ref=e47]: ▶
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: u2.dani.a
+          - generic [ref=e51]: Jasper
+          - generic [ref=e52]: 7.6s
+          - generic [ref=e53]: NEW
+        - generic [ref=e54]: After DANI's argumentation system was broken, you restored it faster than expected and got him back online in no time.
+    - generic [ref=e55] [cursor=pointer]:
+      - generic [ref=e56]: ▶
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: u2.dani.b
+          - generic [ref=e60]: Jasper
+          - generic [ref=e61]: 4.9s
+          - generic [ref=e62]: NEW
+        - generic [ref=e63]: When DANI's argumentation system was broken, you worked hard to restore it.
+    - generic [ref=e64] [cursor=pointer]:
+      - generic [ref=e65]: ▶
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: u2.water.a
+          - generic [ref=e69]: Jasper
+          - generic [ref=e70]: 12.8s
+          - generic [ref=e71]: NEW
+        - generic [ref=e72]: One of your biggest decisions was evaluating the available water sources and selecting the best location for our new base. That decision gave our team reliable access to the water we needed to survive!
+    - generic [ref=e73] [cursor=pointer]:
+      - generic [ref=e74]: ▶
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: u2.water.b
+          - generic [ref=e78]: Jasper
+          - generic [ref=e79]: 15.3s
+          - generic [ref=e80]: NEW
+        - generic [ref=e81]: One of your biggest decisions was evaluating the available water sources. Even though it took a few tries you eventually selected the best location for our new base. That decision gave our team reliable access to the water we needed to survive.
+    - generic [ref=e82] [cursor=pointer]:
+      - generic [ref=e83]: ▶
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: u2.thanks
+          - generic [ref=e87]: Jasper
+          - generic [ref=e88]: 4.5s
+        - generic [ref=e89]: Thank you for everything you did, TK. Tera's been waiting to thank you too.
+    - heading "Unit 3 — Tera" [level=2] [ref=e90]
+    - generic [ref=e91] [cursor=pointer]:
+      - generic [ref=e92]: ▶
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: u3.crates.a
+          - generic [ref=e96]: Tera
+          - generic [ref=e97]: 7.7s
+        - generic [ref=e98]: When I needed help getting my lost equipment crates back to my base, you used what you knew about surface water flow to safely float them down the river.
+    - generic [ref=e99] [cursor=pointer]:
+      - generic [ref=e100]: ▶
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: u3.crates.b
+          - generic [ref=e104]: Tera
+          - generic [ref=e105]: 13.4s
+        - generic [ref=e106]: When I needed help getting my lost equipment crates back to my base, you did your best to help float them down the river. Even though some misunderstandings about surface water flow meant we couldn't recover every crate, I appreciated your willingness to help.
+    - generic [ref=e107] [cursor=pointer]:
+      - generic [ref=e108]: ▶
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: u3.pollution
+          - generic [ref=e112]: Tera
+          - generic [ref=e113]: 9.4s
+        - generic [ref=e114]: And when our water supply was in danger, you helped me track down the ship battery that was contaminating our waterways. Once it was removed, we finally had access to clean water.
+    - generic [ref=e115] [cursor=pointer]:
+      - generic [ref=e116]: ▶
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e119]: u3.garden.a
+          - generic [ref=e120]: Tera
+          - generic [ref=e121]: 14.3s
+          - generic [ref=e122]: NEW
+        - generic [ref=e123]: Later, when our food supply was running low, you figured out the best places to plant superfruit using what you knew about how dissolved materials move through watersheds. Your decisions allowed the plants to thrive and produce enough food to support the mission!
+    - generic [ref=e124] [cursor=pointer]:
+      - generic [ref=e125]: ▶
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]: u3.garden.b
+          - generic [ref=e129]: Tera
+          - generic [ref=e130]: 13.8s
+          - generic [ref=e131]: NEW
+        - generic [ref=e132]: Later, when our food supply was running low, you worked to help us identify the best places to plant superfruit. Although some of your garden plot choices didn't work out as planned, your efforts helped us learn more about how nutrients move through the watershed.
+    - generic [ref=e133] [cursor=pointer]:
+      - generic [ref=e134]: ▶
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - generic [ref=e137]: u3.thanks
+          - generic [ref=e138]: Tera
+          - generic [ref=e139]: 3.1s
+        - generic [ref=e140]: We couldn't have done it without you. Thank you, TK!
+    - heading "Unit 4 — Anderson" [level=2] [ref=e141]
+    - generic [ref=e142] [cursor=pointer]:
+      - generic [ref=e143]: ▶
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - generic [ref=e146]: u4.well
+          - generic [ref=e147]: Anderson
+          - generic [ref=e148]: 10.5s
+        - generic [ref=e149]: TK, you applied your knowledge of groundwater to determine the best location to drill our well. This allowed the team to activate the fountain and restore water to the area.
+    - generic [ref=e150] [cursor=pointer]:
+      - generic [ref=e151]: ▶
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]: u4.flood
+          - generic [ref=e155]: Anderson
+          - generic [ref=e156]: 14.7s
+        - generic [ref=e157]: And when my underground bunker began flooding, you analyzed the evidence and convinced me that it wouldn't stop on its own. Your quick thinking saved my life! I can't thank you enough for helping me get out alive!
+    - generic [ref=e158] [cursor=pointer]:
+      - generic [ref=e159]: ▶
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e162]: u4.soil.a
+          - generic [ref=e163]: Anderson
+          - generic [ref=e164]: 11.2s
+          - generic [ref=e165]: NEW
+        - generic [ref=e166]: You even used your understanding of soil infiltration to help identify the best soil type to use with our seedlings. Because of you, we have more fresh food to go around!
+    - generic [ref=e167] [cursor=pointer]:
+      - generic [ref=e168]: ▶
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: u4.soil.b
+          - generic [ref=e172]: Anderson
+          - generic [ref=e173]: 5.3s
+          - generic [ref=e174]: NEW
+        - generic [ref=e175]: You even worked with me to help identify the best soil type to use with our seedlings.
+    - generic [ref=e176] [cursor=pointer]:
+      - generic [ref=e177]: ▶
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: u4.thanks
+          - generic [ref=e181]: Anderson
+          - generic [ref=e182]: 2.2s
+        - generic [ref=e183]: Your hard work is appreciated, TK!
+    - heading "Unit 5 — Aryn" [level=2] [ref=e184]
+    - generic [ref=e185] [cursor=pointer]:
+      - generic [ref=e186]: ▶
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - generic [ref=e189]: u5.plant.a
+          - generic [ref=e190]: Aryn
+          - generic [ref=e191]: 12.1s
+          - generic [ref=e192]: NEW
+        - generic [ref=e193]: Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you used your excellent knowledge of evaporation and condensation to convince me that the water evaporated due to natural causes.
+    - generic [ref=e194] [cursor=pointer]:
+      - generic [ref=e195]: ▶
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]: u5.plant.b
+          - generic [ref=e199]: Aryn
+          - generic [ref=e200]: 8.1s
+          - generic [ref=e201]: NEW
+        - generic [ref=e202]: Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you convinced me that the water evaporated due to natural causes.
+    - generic [ref=e203] [cursor=pointer]:
+      - generic [ref=e204]: ▶
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - generic [ref=e207]: u5.still.a
+          - generic [ref=e208]: Aryn
+          - generic [ref=e209]: 9.1s
+          - generic [ref=e210]: NEW
+        - generic [ref=e211]: It was also because of your incredible work that we were able to properly set up the solar still to convert sea water into drinkable water. Now we'll have the fresh water we need!
+    - generic [ref=e212] [cursor=pointer]:
+      - generic [ref=e213]: ▶
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - generic [ref=e216]: u5.still.b
+          - generic [ref=e217]: Aryn
+          - generic [ref=e218]: 10.7s
+          - generic [ref=e219]: NEW
+        - generic [ref=e220]: You also did your best to help set up the solar still to convert sea water into drinkable water. Though it's not perfect yet, I know your work will help us get closer to having enough fresh water for everyone.
+    - generic [ref=e221] [cursor=pointer]:
+      - generic [ref=e222]: ▶
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]: u5.handoff
+          - generic [ref=e226]: Aryn
+          - generic [ref=e227]: 2.8s
+          - generic [ref=e228]: NEW
+        - generic [ref=e229]: I think Captain Toppo has one final thing to show you.
+    - heading "Conclusion — Toppo" [level=2] [ref=e230]
+    - generic [ref=e231] [cursor=pointer]:
+      - generic [ref=e232]: ▶
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - generic [ref=e235]: end.skills
+          - generic [ref=e236]: Toppo
+          - generic [ref=e237]: 8.5s
+          - generic [ref=e238]: NEW
+        - generic [ref=e239]: Cadet. Throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.
+    - generic [ref=e240] [cursor=pointer]:
+      - generic [ref=e241]: ▶
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - generic [ref=e244]: end.award
+          - generic [ref=e245]: Toppo
+          - generic [ref=e246]: 20.0s
+          - generic [ref=e247]: NEW
+        - generic [ref=e248]: Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the title Planetary Water Steward!
+  - paragraph [ref=e249]:
+    - link "← Test launcher" [ref=e250] [cursor=pointer]:
+      - /url: index.html
+    - text: "· clips:"
+    - code [ref=e251]: assets/audio/<Speaker>/<lineId>.mp3

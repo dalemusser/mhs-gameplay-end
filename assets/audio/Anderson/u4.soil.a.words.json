@@ -3,157 +3,157 @@
     {
       "word": "You",
       "start": 0,
-      "end": 0.186
+      "end": 0.255
     },
     {
       "word": "even",
-      "start": 0.267,
-      "end": 0.522
+      "start": 0.348,
+      "end": 0.557
     },
     {
       "word": "used",
-      "start": 0.604,
-      "end": 0.871
+      "start": 0.627,
+      "end": 0.882
     },
     {
       "word": "your",
-      "start": 0.906,
-      "end": 1.022
+      "start": 0.917,
+      "end": 1.045
     },
     {
       "word": "understanding",
-      "start": 1.091,
+      "start": 1.103,
       "end": 1.718
     },
     {
       "word": "of",
       "start": 1.765,
-      "end": 1.823
+      "end": 1.834
     },
     {
       "word": "soil",
-      "start": 1.916,
-      "end": 2.229
+      "start": 1.95,
+      "end": 2.334
     },
     {
       "word": "infiltration",
-      "start": 2.322,
-      "end": 3.088
+      "start": 2.415,
+      "end": 3.146
     },
     {
       "word": "to",
-      "start": 3.158,
-      "end": 3.239
+      "start": 3.204,
+      "end": 3.262
     },
     {
       "word": "help",
-      "start": 3.309,
-      "end": 3.471
+      "start": 3.332,
+      "end": 3.495
     },
     {
       "word": "identify",
-      "start": 3.541,
-      "end": 4.063
+      "start": 3.576,
+      "end": 4.133
     },
     {
       "word": "the",
-      "start": 4.145,
-      "end": 4.226
+      "start": 4.203,
+      "end": 4.272
     },
     {
       "word": "best",
-      "start": 4.296,
-      "end": 4.54
+      "start": 4.354,
+      "end": 4.632
     },
     {
       "word": "soil",
-      "start": 4.598,
-      "end": 4.888
+      "start": 4.725,
+      "end": 5.097
     },
     {
       "word": "type",
-      "start": 4.957,
-      "end": 5.224
+      "start": 5.166,
+      "end": 5.457
     },
     {
       "word": "to",
-      "start": 5.259,
-      "end": 5.329
+      "start": 5.492,
+      "end": 5.561
     },
     {
       "word": "use",
-      "start": 5.41,
-      "end": 5.584
+      "start": 5.677,
+      "end": 5.886
     },
     {
       "word": "with",
-      "start": 5.619,
-      "end": 5.747
+      "start": 5.921,
+      "end": 6.049
     },
     {
       "word": "our",
-      "start": 5.793,
-      "end": 5.909
+      "start": 6.095,
+      "end": 6.211
     },
     {
       "word": "seedlings.",
-      "start": 5.979,
-      "end": 6.85
+      "start": 6.293,
+      "end": 7.245
     },
     {
       "word": "Because",
-      "start": 7.129,
-      "end": 7.488
+      "start": 7.628,
+      "end": 8.057
     },
     {
       "word": "of",
-      "start": 7.523,
-      "end": 7.593
+      "start": 8.104,
+      "end": 8.162
     },
     {
-      "word": "you",
-      "start": 7.663,
-      "end": 7.814
+      "word": "you,",
+      "start": 8.243,
+      "end": 8.615
     },
     {
       "word": "we",
-      "start": 8.139,
-      "end": 8.266
+      "start": 8.893,
+      "end": 9.033
     },
     {
       "word": "have",
-      "start": 8.313,
-      "end": 8.452
+      "start": 9.102,
+      "end": 9.253
     },
     {
       "word": "more",
-      "start": 8.487,
-      "end": 8.661
+      "start": 9.288,
+      "end": 9.439
     },
     {
       "word": "fresh",
-      "start": 8.707,
-      "end": 8.975
+      "start": 9.497,
+      "end": 9.799
     },
     {
       "word": "food",
-      "start": 9.044,
-      "end": 9.265
+      "start": 9.868,
+      "end": 10.147
     },
     {
       "word": "to",
-      "start": 9.3,
-      "end": 9.358
+      "start": 10.182,
+      "end": 10.252
     },
     {
       "word": "go",
-      "start": 9.427,
-      "end": 9.555
+      "start": 10.31,
+      "end": 10.426
     },
     {
       "word": "around!",
-      "start": 9.613,
-      "end": 10.31
+      "start": 10.484,
+      "end": 11.192
     }
   ]
 }

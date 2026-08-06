@@ -60,40 +60,42 @@ const DEF = {
 
 console.log('resolver tests:');
 
-test('real definition resolves to 17 beats with the right speaker order', () => {
+test('real definition resolves to 20 beats with the right speaker order', () => {
   const r = resolve(REAL, scores({}));
-  assert.strictEqual(r.beats.length, 17);
+  assert.strictEqual(r.beats.length, 20);
   assert.deepStrictEqual(r.beats.map(b => b.speaker), [
-    'Toppo',                                              // intro (placeholder)
+    'Toppo',                                              // intro (u1.intro)
     'Jasper', 'Jasper', 'Jasper', 'Jasper', 'Jasper',     // unit 2
     'Tera', 'Tera', 'Tera', 'Tera',                       // unit 3
     'Anderson', 'Anderson', 'Anderson', 'Anderson',       // unit 4
-    'Aryn',                                               // unit 5 (placeholder)
-    undefined,                                            // celebration
-    'Toppo',                                              // finale (placeholder)
+    'Aryn', 'Aryn', 'Aryn',                               // unit 5
+    'Toppo', 'Toppo',                                     // conclusion
+    undefined,                                            // ending celebration (last)
   ]);
-  assert.strictEqual(r.beats[15].type, 'celebration');
+  assert.strictEqual(r.beats[0].startAtMark, true);       // Toppo opens already at the mark
+  assert.strictEqual(r.beats[0].lineId, 'u1.intro');
+  const celeb = r.beats[19];
+  assert.strictEqual(celeb.type, 'celebration');
+  assert.strictEqual(celeb.ending, 'fade');
+  assert.ok(celeb.holo.title.includes('WATER STEWARD'));
+  const skills = r.beats.find(b => b.sectionId === 'end.skills');
+  assert.strictEqual(skills.holo.highlights.length, 5);   // the progressive highlight list
   assert.strictEqual(r.layout.mc, 'Toppo');
 });
 
-test('all-high profile picks every high-score variant (designer A/B labels)', () => {
+test('all-high profile picks every A variant (A = best-case, standardized)', () => {
   const r = resolve(REAL, ALL_HIGH);
-  assert.strictEqual(variantOf(r, 'u2.find-team'), 'u2.find-team.a');
-  assert.strictEqual(variantOf(r, 'u2.dani'), 'u2.dani.b');      // script's B is the happy line here
-  assert.strictEqual(variantOf(r, 'u2.water'), 'u2.water.b');    // ditto
-  assert.strictEqual(variantOf(r, 'u3.crates'), 'u3.crates.a');
-  assert.strictEqual(variantOf(r, 'u3.garden'), 'u3.garden.a');
-  assert.strictEqual(variantOf(r, 'u4.soil'), 'u4.soil.a');
+  for (const s of ['u2.find-team', 'u2.dani', 'u2.water', 'u3.crates', 'u3.garden', 'u4.soil', 'u5.plant', 'u5.still'])
+    assert.strictEqual(variantOf(r, s), s + '.a');
 });
 
-test('all-low profile picks every modest variant', () => {
+test('all-low profile picks every B variant, all neutral', () => {
   const r = resolve(REAL, ALL_LOW);
-  assert.strictEqual(variantOf(r, 'u2.find-team'), 'u2.find-team.b');
-  assert.strictEqual(variantOf(r, 'u2.dani'), 'u2.dani.a');
-  assert.strictEqual(variantOf(r, 'u2.water'), 'u2.water.a');
-  assert.strictEqual(variantOf(r, 'u3.crates'), 'u3.crates.b');
-  assert.strictEqual(variantOf(r, 'u3.garden'), 'u3.garden.b');
-  assert.strictEqual(variantOf(r, 'u4.soil'), 'u4.soil.b');
+  for (const s of ['u2.find-team', 'u2.dani', 'u2.water', 'u3.crates', 'u3.garden', 'u4.soil', 'u5.plant', 'u5.still']) {
+    const beat = r.beats.find(b => b.sectionId === s);
+    assert.strictEqual(beat.lineId, s + '.b');
+    assert.strictEqual(beat.expression, 'neutral');
+  }
 });
 
 test('empty scores resolve identically to all-low (missing → modest variant)', () => {
@@ -107,26 +109,24 @@ test('u3.crates variants carry their own image sets', () => {
   assert.ok(lo.holo.images[0].includes('Incorrect'));
 });
 
-const CONDITIONALS = ['u2.find-team', 'u2.dani', 'u2.water', 'u3.crates', 'u3.garden', 'u4.soil'];
+const CONDITIONALS = ['u2.find-team', 'u2.dani', 'u2.water', 'u3.crates', 'u3.garden', 'u4.soil', 'u5.plant', 'u5.still'];
 const variants = (r) => CONDITIONALS.map(s => variantOf(r, s));
+const suffixes = (r) => variants(r).map(id => id.slice(-1));
 
-test('mixed-a alternates: high, low, high, low, high, low', () => {
-  assert.deepStrictEqual(variants(resolve(REAL, MIXED_A)),
-    ['u2.find-team.a', 'u2.dani.a', 'u2.water.b', 'u3.crates.b', 'u3.garden.a', 'u4.soil.b']);
+test('mixed-a alternates a,b,a,b… across all eight sections', () => {
+  assert.deepStrictEqual(suffixes(resolve(REAL, MIXED_A)), ['a', 'b', 'a', 'b', 'a', 'b', 'a', 'b']);
 });
 
 test('mixed-b is the inverse alternation of mixed-a', () => {
-  assert.deepStrictEqual(variants(resolve(REAL, MIXED_B)),
-    ['u2.find-team.b', 'u2.dani.b', 'u2.water.a', 'u3.crates.a', 'u3.garden.b', 'u4.soil.a']);
+  assert.deepStrictEqual(suffixes(resolve(REAL, MIXED_B)), ['b', 'a', 'b', 'a', 'b', 'a', 'b', 'a']);
 });
 
-test('boundary (every score exactly at threshold) plays ALL happy variants', () => {
+test('boundary (every score exactly at threshold; U5.C3=1 for its ">0") plays ALL A variants', () => {
   assert.deepStrictEqual(variants(resolve(REAL, BOUNDARY)), variants(resolve(REAL, ALL_HIGH)));
 });
 
-test('partial (no Unit 4 items) falls back to the gentle soil variant', () => {
-  assert.deepStrictEqual(variants(resolve(REAL, PARTIAL)),
-    ['u2.find-team.b', 'u2.dani.b', 'u2.water.b', 'u3.crates.a', 'u3.garden.b', 'u4.soil.b']);
+test('partial (no Unit 4/5 items) falls back to B for soil, plant, and still', () => {
+  assert.deepStrictEqual(suffixes(resolve(REAL, PARTIAL)), ['b', 'a', 'a', 'a', 'b', 'b', 'b', 'b']);
 });
 
 test('no-data profile matches empty scores (all fallback variants)', () => {

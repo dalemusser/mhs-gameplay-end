@@ -132,6 +132,11 @@ run and regenerate only those (script is still evolving; regeneration churn is e
 
 ### Phase 0 — Designer clarifications (blocking for content, not for engineering)
 
+> **2026-08-04: all five questions answered** and an updated script delivered
+> (`designer-content/End of Game Script v2.md` — real intro, Unit 5, conclusion;
+> A/B standardized with A always best-case; Condition-B emotion now `neutral`).
+> The implementation plan for the v2 script is `docs/script-v2-plan.md`.
+
 Send to the designers now; everything else can proceed against provisional answers:
 
 1. **U3.C4 numbering.** The script conditions garden plots on "U3.C4", but the EA
@@ -284,6 +289,11 @@ the go signal for Phases 4–5.
 > variant; browser-verified clips fetch per beat. Audio total: 3.2 MB.
 
 ### Phase 4 — mhsgrader EA extension (decision: grader computes EA scores)
+
+> **2026-08-03:** deferred to the next mhsgrader work cycle. The full
+> implementation brief — verified rule-by-rule crosswalk, banding tables,
+> storage design, backfill plan, checklist — lives at
+> `mhsgrader/docs/updates/ea-scores.md`. Work from that document.
 
 1. **Crosswalk doc** (in mhsgrader `docs/`): EA checkpoint ↔ grader rule ↔ banding
    formula, sourced from the EA working doc

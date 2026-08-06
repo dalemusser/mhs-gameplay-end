@@ -1,5 +1,9 @@
 # End-of-Game Script — Questions for the Design Team
 
+> **ANSWERED 2026-08-04.** All five resolved alongside the updated script
+> (`designer-content/End of Game Script v2.md`). Answers and their consequences
+> are recorded in `docs/script-v2-plan.md` §1. Kept for reference.
+
 *2026-08-03 — five clarifications needed on the "End of Game Script." Each item shows the
 technical note first, followed by a plain-language explanation.*
 

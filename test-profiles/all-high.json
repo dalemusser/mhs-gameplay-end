@@ -1,15 +1,17 @@
 {
   "game": "mhs",
   "user_id": "000000000000000000000001",
-  "generatedAt": "2026-08-03T00:00:00Z",
+  "generatedAt": "2026-08-04T00:00:00Z",
   "currentUnit": "unit5",
   "items": {
     "U2.C2": { "score": 1.0, "max": 1.0 },
     "U2.C3": { "score": 1.5, "max": 1.5 },
-    "U2.C5": { "score": 5.0, "max": 7.0 },
+    "U2.C5": { "score": 5.0, "max": 6.0 },
     "U2.C7": { "score": 3.0, "max": 3.0 },
     "U3.C1": { "score": 3.0, "max": 3.0 },
-    "U3.C4": { "score": 3.0, "max": 3.0 },
-    "U4.C6": { "score": 3.0, "max": 3.0 }
+    "U3.C5": { "score": 4.0, "max": 4.0 },
+    "U4.C6": { "score": 3.0, "max": 3.0 },
+    "U5.C3": { "score": 3.0, "max": 3.0 },
+    "U5.C5": { "score": 2.0, "max": 2.0 }
   }
 }

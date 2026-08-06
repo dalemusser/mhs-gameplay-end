@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHS Ceremony — Audio Audition</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --panel: rgba(10,18,30,0.72); --edge: rgba(90,160,255,0.45); --cyan: #7fd0ff; }
+  html, body { margin: 0; min-height: 100%; background: #05070c; color: #dfe6f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 80px; }
+  h1 { font-size: 22px; margin: 0 0 4px; color: #fff; }
+  h1 .sub { color: var(--cyan); font-weight: 600; }
+  p.lede { color: #8fa2bd; font-size: 13.5px; line-height: 1.5; margin: 8px 0 18px; }
+  .toolbar { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+  button.ctl { background: rgba(20,40,70,0.8); color: #dfe6f0; border: 1px solid #3d6fa0;
+    border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer; }
+  button.ctl:hover { background: rgba(40,72,116,0.95); border-color: #5b9bff; }
+  button.ctl.primary { background: #2b6fb8; border-color: #5b9bff; font-weight: 600; }
+
+  h2.group { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cyan);
+    margin: 26px 0 10px; border-bottom: 1px solid rgba(90,160,255,0.25); padding-bottom: 6px; }
+  .row { display: flex; gap: 14px; align-items: flex-start; background: var(--panel);
+    border: 1px solid var(--edge); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px;
+    cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+  .row:hover { border-color: #5b9bff; }
+  .row.playing { border-color: #7fd0ff; box-shadow: 0 0 18px rgba(60,150,255,0.35); }
+  .btn { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #5b9bff;
+    background: #2b6fb8; color: #fff; font-size: 15px; display: flex; align-items: center;
+    justify-content: center; user-select: none; }
+  .row.playing .btn { background: #d97535; border-color: #ffb27d; }
+  .meta { flex: 1 1 auto; min-width: 0; }
+  .head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
+  .lid { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; color: var(--cyan); }
+  .spk { font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #b9d8ff; }
+  .dur { font-size: 11.5px; color: #46566e; }
+  .badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 8px;
+    border-radius: 12px; color: #8dffbe; border: 1px solid rgba(90,220,150,0.5); background: rgba(40,160,90,0.12); }
+  .badge.spk { color: #ffd88f; border-color: rgba(230,180,90,0.5); background: rgba(180,130,40,0.12); }
+  .txt { font-size: 14.5px; line-height: 1.5; color: #b9c6da; }
+  .txt .w.on { color: #fff; text-shadow: 0 0 10px rgba(120,200,255,0.8); }
+  .foot { margin-top: 30px; font-size: 12.5px; color: #8fa2bd; }
+  .foot a { color: var(--cyan); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mission HydroSci <span class="sub">— Ceremony Audio Audition</span></h1>
+  <p class="lede">
+    Every voice line in the current build, in show order (both A and B variants). Click a row to
+    play it — words light up on the clip's own timings, so this also verifies karaoke sync.
+    Rows marked <span class="badge">NEW</span> were generated or re-generated in this round.
+    Text shown is the dialogue as DISPLAYED in the ceremony; where the spoken text differs
+    (engineered punctuation like "Cadet,"), the row is marked <span class="badge spk">SPOKEN DIFFERS</span>
+    and hovering the text shows what the voice actually says.
+  </p>
+  <div class="toolbar">
+    <button class="ctl primary" id="playNew">▶ Play all NEW in sequence</button>
+    <button class="ctl" id="playAll">▶ Play everything</button>
+    <button class="ctl" id="stop">■ Stop</button>
+  </div>
+  <div id="list">Loading manifest…</div>
+  <p class="foot"><a href="index.html">← Test launcher</a> · clips: <code>assets/audio/&lt;Speaker&gt;/&lt;lineId&gt;.mp3</code></p>
+</div>
+
+<script src="ceremony-definition.js?v=4"></script>
+<script>
+// display text per lineId, from the definition (same walk as tools/export-lines.cjs);
+// the manifest's words are the SPOKEN tokens — display and spoken always have equal
+// word counts (guarded at export), so timings map to display tokens by index.
+const DISPLAY = {}, SPOKEN_DIFFERS = {};
+(function walk(def) {
+  const add = b => { if (b && b.text && b.lineId) { DISPLAY[b.lineId] = b.text;
+    if (b.speakText && b.speakText !== b.text) SPOKEN_DIFFERS[b.lineId] = b.speakText; } };
+  (def.intro || []).forEach(add);
+  (def.units || []).forEach(u => (u.sections || []).forEach(s => {
+    if (s.always) add(s.always);
+    (s.conditions || []).forEach(v => add(v.beat));
+  }));
+  if (def.celebration) add(def.celebration);
+  (def.finale || []).forEach(add);
+})(window.CEREMONY_DEFINITION);
+
+// lines generated or re-generated in the script-v2 round (2026-08-04) — update per round
+const NEW_THIS_ROUND = new Set([
+  'u1.intro', 'u2.crash', 'u2.dani.a', 'u2.dani.b', 'u2.water.a', 'u2.water.b',
+  'u3.garden.a', 'u3.garden.b', 'u4.soil.a', 'u4.soil.b',
+  'u5.plant.a', 'u5.plant.b', 'u5.still.a', 'u5.still.b', 'u5.handoff',
+  'end.skills', 'end.award',
+  'sfx.fanfare-award', 'sfx.applause-small-group',
+]);
+const GROUP = id => id.startsWith('u1.') ? 'Intro / Unit 1'
+  : id.startsWith('u2.') ? 'Unit 2 — Jasper'
+  : id.startsWith('u3.') ? 'Unit 3 — Tera'
+  : id.startsWith('u4.') ? 'Unit 4 — Anderson'
+  : id.startsWith('u5.') ? 'Unit 5 — Aryn'
+  : id.startsWith('sfx.') ? 'Celebration SFX'
+  : 'Conclusion — Toppo';
+
+// hand-managed celebration sounds (assets/sfx/, see its README) — no word timings
+const SFX_ITEMS = [
+  { id: 'sfx.fanfare-award', index: 998, speaker: 'SFX', words: [],
+    audio: 'assets/sfx/fanfare-award.mp3', durationSec: 5.0,
+    desc: 'Award fanfare — plays as the PLANETARY WATER STEWARD card materializes.' },
+  { id: 'sfx.applause-small-group', index: 999, speaker: 'SFX', words: [],
+    audio: 'assets/sfx/applause-small-group.mp3', durationSec: 10.0,
+    desc: 'Small-group applause & cheers — loops under the ending celebration, fades out with the black-out.' },
+];
+
+const listEl = document.getElementById('list');
+const audio = new Audio();
+let current = null;        // {item, row, spans}
+let queue = [];            // items still to play in a play-all run
+let raf = 0;
+
+function stopPlayback() {
+  queue = [];
+  audio.pause();
+  cancelAnimationFrame(raf);
+  if (current) { current.row.classList.remove('playing');
+    current.spans.forEach(s => s.classList.remove('on')); current = null; }
+}
+
+function play(entry) {
+  const was = current && current.item.id === entry.item.id && !audio.paused;
+  stopPlayback();
+  if (was) return;                              // clicking the playing row stops it
+  current = entry;
+  entry.row.classList.add('playing');
+  // bust caches per take: duration+hash change whenever a clip is re-rolled/edited
+  // (SFX rows have no textHash — plain URL)
+  audio.src = entry.item.textHash
+    ? entry.item.audio + '?v=' + entry.item.textHash.slice(0, 8) + '-' + entry.item.durationSec
+    : entry.item.audio;
+  audio.play().catch(() => {});
+  const tick = () => {
+    if (!current) return;
+    const t = audio.currentTime;
+    const words = current.item.words;
+    for (let i = 0; i < words.length; i++)
+      current.spans[i].classList.toggle('on', words[i][0] <= t);
+    raf = requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+// sequential playback: play() resets the queue (a manual row click cancels a run),
+// so the queue must be assigned AFTER play() starts each item
+function playQueue(seq) {
+  stopPlayback();
+  if (!seq.length) return;
+  const rest = seq.slice(1);
+  play(seq[0]);
+  queue = rest;
+}
+
+audio.addEventListener('ended', () => {
+  const rest = queue.slice();
+  stopPlayback();
+  if (rest.length) playQueue(rest);
+});
+
+fetch('assets/audio/ceremony_audio.json?t=' + Date.now()).then(r => r.json()).then(m => {
+  const items = (m.items || []).slice().sort((a, b) => a.index - b.index).concat(SFX_ITEMS);
+  listEl.innerHTML = '';
+  const entries = [];
+  let lastGroup = null;
+  for (const item of items) {
+    const g = GROUP(item.id);
+    if (g !== lastGroup) { lastGroup = g;
+      const h = document.createElement('h2'); h.className = 'group'; h.textContent = g; listEl.appendChild(h); }
+    const row = document.createElement('div'); row.className = 'row';
+    const isNew = NEW_THIS_ROUND.has(item.id);
+    // display tokens (fall back to spoken tokens if the line isn't in the definition
+    // or the counts ever disagree)
+    let tokens = item.words.map(w => w[1]);
+    const disp = DISPLAY[item.id] ? DISPLAY[item.id].split(/\s+/) : null;
+    const usingDisplay = disp && disp.length === tokens.length;
+    if (usingDisplay) tokens = disp;
+    row.innerHTML = '<div class="btn">▶</div><div class="meta">'
+      + '<div class="head"><span class="lid">' + item.id + '</span>'
+      + '<span class="spk">' + item.speaker + '</span>'
+      + '<span class="dur">' + (item.durationSec || 0).toFixed(1) + 's</span>'
+      + (isNew ? '<span class="badge">NEW</span>' : '')
+      + (usingDisplay && SPOKEN_DIFFERS[item.id] ? '<span class="badge spk">SPOKEN DIFFERS</span>' : '')
+      + '</div><div class="txt"></div></div>';
+    const txt = row.querySelector('.txt');
+    if (usingDisplay && SPOKEN_DIFFERS[item.id]) txt.title = 'Spoken: ' + SPOKEN_DIFFERS[item.id];
+    let spans = [];
+    if (item.desc) txt.textContent = item.desc;                 // SFX rows: description, no karaoke
+    else spans = tokens.map((t, i) => { const s = document.createElement('span');
+      s.className = 'w'; s.textContent = t + ' '; txt.appendChild(s); return s; });
+    const entry = { item, row, spans, isNew };
+    row.addEventListener('click', () => play(entry));
+    listEl.appendChild(row);
+    entries.push(entry);
+  }
+  document.getElementById('playNew').onclick = () => playQueue(entries.filter(e => e.isNew));
+  document.getElementById('playAll').onclick = () => playQueue(entries.slice());
+  document.getElementById('stop').onclick = stopPlayback;
+}).catch(e => { listEl.textContent = 'Could not load assets/audio/ceremony_audio.json — serve this folder over HTTP.'; });
+</script>
+</body>
+</html>

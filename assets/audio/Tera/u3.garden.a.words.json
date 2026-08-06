@@ -3,222 +3,217 @@
     {
       "word": "Later,",
       "start": 0,
-      "end": 0.569
+      "end": 0.557
     },
     {
       "word": "when",
-      "start": 0.894,
-      "end": 1.057
+      "start": 0.801,
+      "end": 0.964
     },
     {
       "word": "our",
-      "start": 1.091,
-      "end": 1.184
+      "start": 0.998,
+      "end": 1.08
     },
     {
       "word": "food",
-      "start": 1.231,
-      "end": 1.428
+      "start": 1.138,
+      "end": 1.324
     },
     {
       "word": "supply",
-      "start": 1.463,
-      "end": 1.73
+      "start": 1.358,
+      "end": 1.625
     },
     {
       "word": "was",
-      "start": 1.8,
-      "end": 1.892
+      "start": 1.683,
+      "end": 1.776
     },
     {
       "word": "running",
-      "start": 1.939,
-      "end": 2.159
+      "start": 1.834,
+      "end": 2.078
     },
     {
       "word": "low,",
-      "start": 2.218,
-      "end": 2.624
+      "start": 2.125,
+      "end": 2.519
     },
     {
       "word": "you",
-      "start": 3.065,
-      "end": 3.17
+      "start": 2.844,
+      "end": 2.949
     },
     {
-      "word": "helped",
-      "start": 3.251,
-      "end": 3.46
+      "word": "figured",
+      "start": 3.019,
+      "end": 3.297
     },
     {
-      "word": "me",
-      "start": 3.506,
-      "end": 3.587
-    },
-    {
-      "word": "identify",
-      "start": 3.646,
-      "end": 4.122
+      "word": "out",
+      "start": 3.32,
+      "end": 3.425
     },
     {
       "word": "the",
-      "start": 4.191,
-      "end": 4.261
+      "start": 3.46,
+      "end": 3.529
     },
     {
       "word": "best",
-      "start": 4.307,
-      "end": 4.505
+      "start": 3.576,
+      "end": 3.773
     },
     {
       "word": "places",
-      "start": 4.551,
-      "end": 4.876
+      "start": 3.82,
+      "end": 4.133
     },
     {
       "word": "to",
-      "start": 4.911,
-      "end": 4.957
+      "start": 4.168,
+      "end": 4.226
     },
     {
       "word": "plant",
-      "start": 5.016,
-      "end": 5.259
+      "start": 4.284,
+      "end": 4.516
     },
     {
       "word": "superfruit",
-      "start": 5.306,
-      "end": 5.863
+      "start": 4.563,
+      "end": 5.132
     },
     {
       "word": "using",
-      "start": 6.188,
-      "end": 6.444
+      "start": 5.642,
+      "end": 5.921
     },
     {
       "word": "what",
-      "start": 6.49,
-      "end": 6.606
+      "start": 5.956,
+      "end": 6.072
     },
     {
       "word": "you",
-      "start": 6.641,
-      "end": 6.722
+      "start": 6.118,
+      "end": 6.2
     },
     {
       "word": "knew",
-      "start": 6.78,
-      "end": 6.943
+      "start": 6.269,
+      "end": 6.455
     },
     {
       "word": "about",
-      "start": 7.001,
-      "end": 7.21
+      "start": 6.513,
+      "end": 6.734
     },
     {
       "word": "how",
-      "start": 7.256,
-      "end": 7.372
+      "start": 6.78,
+      "end": 6.885
     },
     {
       "word": "dissolved",
-      "start": 7.454,
-      "end": 7.906
+      "start": 6.954,
+      "end": 7.361
     },
     {
       "word": "materials",
-      "start": 7.964,
-      "end": 8.522
+      "start": 7.419,
+      "end": 7.918
     },
     {
       "word": "move",
-      "start": 8.591,
-      "end": 8.777
+      "start": 7.988,
+      "end": 8.173
     },
     {
       "word": "through",
-      "start": 8.8,
-      "end": 8.975
+      "start": 8.197,
+      "end": 8.382
     },
     {
       "word": "watersheds.",
-      "start": 9.009,
-      "end": 9.834
+      "start": 8.417,
+      "end": 9.253
     },
     {
       "word": "Your",
-      "start": 10.53,
-      "end": 10.693
+      "start": 9.764,
+      "end": 9.938
     },
     {
       "word": "decisions",
-      "start": 10.751,
-      "end": 11.204
+      "start": 9.985,
+      "end": 10.414
     },
     {
       "word": "allowed",
-      "start": 11.238,
-      "end": 11.482
+      "start": 10.461,
+      "end": 10.728
     },
     {
       "word": "the",
-      "start": 11.505,
-      "end": 11.575
+      "start": 10.751,
+      "end": 10.82
     },
     {
       "word": "plants",
-      "start": 11.61,
-      "end": 11.912
+      "start": 10.855,
+      "end": 11.134
     },
     {
       "word": "to",
-      "start": 11.947,
-      "end": 12.016
+      "start": 11.169,
+      "end": 11.238
     },
     {
       "word": "thrive",
-      "start": 12.086,
-      "end": 12.504
+      "start": 11.308,
+      "end": 11.784
     },
     {
       "word": "and",
-      "start": 12.539,
-      "end": 12.62
+      "start": 11.831,
+      "end": 11.981
     },
     {
       "word": "produce",
-      "start": 12.678,
-      "end": 12.992
+      "start": 12.028,
+      "end": 12.411
     },
     {
       "word": "enough",
-      "start": 13.026,
-      "end": 13.224
+      "start": 12.457,
+      "end": 12.701
     },
     {
       "word": "food",
-      "start": 13.259,
-      "end": 13.468
+      "start": 12.748,
+      "end": 12.98
     },
     {
       "word": "to",
-      "start": 13.502,
-      "end": 13.56
+      "start": 13.026,
+      "end": 13.096
     },
     {
       "word": "support",
-      "start": 13.618,
-      "end": 13.932
+      "start": 13.166,
+      "end": 13.526
     },
     {
       "word": "the",
-      "start": 13.967,
-      "end": 14.036
+      "start": 13.572,
+      "end": 13.642
     },
     {
       "word": "mission!",
-      "start": 14.071,
-      "end": 14.721
+      "start": 13.688,
+      "end": 14.35
     }
   ]
 }

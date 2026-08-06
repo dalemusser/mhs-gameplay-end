@@ -48,23 +48,24 @@
   </p>
 
   <div class="legend">
-    <span class="chip happy">happy variant</span>
-    <span class="chip gentle">gentle variant</span>
-    <span>· labels show the designer script's Condition A/B letter</span>
+    <span class="chip happy">A · best-case variant</span>
+    <span class="chip gentle">B · generic variant</span>
+    <span>· letters are the script's standardized Condition A/B</span>
   </div>
 
   <div class="grid" id="grid"></div>
 
   <p class="foot">
-    <a href="ceremony.html">▶ Production default</a> — no profile parameter; the ceremony fetches real
+    <a href="ceremony.html" target="_blank" rel="noopener">▶ Production default</a> — no profile parameter; the ceremony fetches real
     scores (until that endpoint exists, it behaves like No&nbsp;Data).<br>
+    <a href="audition.html">🎧 Audio audition</a> — every voice line, click to play, karaoke-timing check.<br>
     Serve this folder with any static server (e.g. <code>python3 -m http.server 8000</code>) —
     fetches fail over <code>file://</code>.
   </p>
 </div>
 
 <script src="lib/resolver.js?v=1"></script>
-<script src="ceremony-definition.js?v=1"></script>
+<script src="ceremony-definition.js?v=4"></script>
 <script>
 const PROFILES = [
   { file: 'all-high', title: 'All High',
@@ -91,6 +92,8 @@ const SECTION_LABEL = {
   'u3.crates':    'Crates',
   'u3.garden':    'Garden',
   'u4.soil':      'Soil',
+  'u5.plant':     "Aryn's Plant",
+  'u5.still':     'Solar Still',
 };
 
 const grid = document.getElementById('grid');
@@ -99,6 +102,7 @@ PROFILES.forEach(async p => {
   const card = document.createElement('a');
   card.className = 'card';
   card.href = 'ceremony.html?profile=' + encodeURIComponent(p.file);
+  card.target = '_blank'; card.rel = 'noopener';   // ceremony opens in its own tab; the launcher stays put
   card.innerHTML = '<h2>' + p.title + '</h2>'
     + '<div class="file">test-profiles/' + p.file + '.json</div>'
     + '<p>' + p.desc + '</p>'
@@ -114,8 +118,8 @@ PROFILES.forEach(async p => {
     for (const [sectionId, label] of Object.entries(SECTION_LABEL)) {
       const beat = resolved.beats.find(b => b.sectionId === sectionId);
       if (!beat) continue;
-      const letter = (beat.lineId || '').slice(-1).toUpperCase();     // designer's A/B label
-      const gentle = beat.expression === 'slightly-sad';
+      const letter = (beat.lineId || '').slice(-1).toUpperCase();
+      const gentle = letter === 'B';       // A/B standardized: A = best-case, B = generic
       const chip = document.createElement('span');
       chip.className = 'chip ' + (gentle ? 'gentle' : 'happy');
       chip.textContent = label + ' · ' + letter;

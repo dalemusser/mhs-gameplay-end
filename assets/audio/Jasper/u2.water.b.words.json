@@ -1,154 +1,214 @@
 {
   "words": [
     {
-      "word": "You",
+      "word": "One",
       "start": 0,
-      "end": 0.151
+      "end": 0.29
     },
     {
-      "word": "also",
-      "start": 0.209,
-      "end": 0.406
+      "word": "of",
+      "start": 0.325,
+      "end": 0.372
     },
     {
-      "word": "evaluated",
-      "start": 0.476,
-      "end": 1.01
+      "word": "your",
+      "start": 0.43,
+      "end": 0.557
+    },
+    {
+      "word": "biggest",
+      "start": 0.615,
+      "end": 0.94
+    },
+    {
+      "word": "decisions",
+      "start": 0.987,
+      "end": 1.498
+    },
+    {
+      "word": "was",
+      "start": 1.544,
+      "end": 1.672
+    },
+    {
+      "word": "evaluating",
+      "start": 1.73,
+      "end": 2.438
     },
     {
       "word": "the",
-      "start": 1.045,
-      "end": 1.115
+      "start": 2.496,
+      "end": 2.566
     },
     {
       "word": "available",
-      "start": 1.149,
-      "end": 1.591
+      "start": 2.612,
+      "end": 3.088
     },
     {
       "word": "water",
-      "start": 1.625,
-      "end": 1.869
+      "start": 3.123,
+      "end": 3.425
     },
     {
-      "word": "sources",
-      "start": 1.927,
-      "end": 2.38
-    },
-    {
-      "word": "and",
-      "start": 2.554,
-      "end": 2.763
-    },
-    {
-      "word": "selected",
-      "start": 2.833,
-      "end": 3.216
-    },
-    {
-      "word": "the",
-      "start": 3.251,
-      "end": 3.32
-    },
-    {
-      "word": "best",
-      "start": 3.367,
-      "end": 3.564
-    },
-    {
-      "word": "location",
-      "start": 3.622,
+      "word": "sources.",
+      "start": 3.471,
       "end": 4.087
     },
     {
-      "word": "for",
-      "start": 4.145,
-      "end": 4.249
-    },
-    {
-      "word": "our",
-      "start": 4.296,
-      "end": 4.389
-    },
-    {
-      "word": "new",
-      "start": 4.435,
-      "end": 4.54
-    },
-    {
-      "word": "base.",
+      "word": "Even",
       "start": 4.598,
-      "end": 5.074
+      "end": 4.865
     },
     {
-      "word": "That",
-      "start": 5.584,
-      "end": 5.782
+      "word": "though",
+      "start": 4.899,
+      "end": 5.085
     },
     {
-      "word": "decision",
-      "start": 5.84,
-      "end": 6.246
+      "word": "it",
+      "start": 5.12,
+      "end": 5.178
     },
     {
-      "word": "gave",
-      "start": 6.304,
-      "end": 6.478
+      "word": "took",
+      "start": 5.213,
+      "end": 5.375
     },
     {
-      "word": "our",
-      "start": 6.513,
-      "end": 6.618
+      "word": "a",
+      "start": 5.433,
+      "end": 5.457
     },
     {
-      "word": "team",
-      "start": 6.664,
-      "end": 6.885
+      "word": "few",
+      "start": 5.526,
+      "end": 5.7
     },
     {
-      "word": "reliable",
-      "start": 6.954,
-      "end": 7.442
+      "word": "tries",
+      "start": 5.747,
+      "end": 6.211
     },
     {
-      "word": "access",
-      "start": 7.488,
-      "end": 7.883
+      "word": "you",
+      "start": 6.455,
+      "end": 6.571
     },
     {
-      "word": "to",
-      "start": 7.918,
-      "end": 7.964
+      "word": "eventually",
+      "start": 6.653,
+      "end": 7.117
+    },
+    {
+      "word": "selected",
+      "start": 7.163,
+      "end": 7.628
     },
     {
       "word": "the",
-      "start": 8.022,
-      "end": 8.092
+      "start": 7.674,
+      "end": 7.755
     },
     {
-      "word": "water",
-      "start": 8.127,
-      "end": 8.348
+      "word": "best",
+      "start": 7.814,
+      "end": 8.022
     },
     {
-      "word": "we",
-      "start": 8.394,
-      "end": 8.475
+      "word": "location",
+      "start": 8.092,
+      "end": 8.603
     },
     {
-      "word": "needed",
-      "start": 8.533,
+      "word": "for",
+      "start": 8.661,
       "end": 8.789
     },
     {
-      "word": "to",
-      "start": 8.824,
-      "end": 8.893
+      "word": "our",
+      "start": 8.847,
+      "end": 8.94
     },
     {
-      "word": "survive!",
-      "start": 8.963,
-      "end": 9.799
+      "word": "new",
+      "start": 8.998,
+      "end": 9.125
+    },
+    {
+      "word": "base.",
+      "start": 9.183,
+      "end": 9.671
+    },
+    {
+      "word": "That",
+      "start": 10.275,
+      "end": 10.507
+    },
+    {
+      "word": "decision",
+      "start": 10.565,
+      "end": 11.006
+    },
+    {
+      "word": "gave",
+      "start": 11.064,
+      "end": 11.25
+    },
+    {
+      "word": "our",
+      "start": 11.285,
+      "end": 11.389
+    },
+    {
+      "word": "team",
+      "start": 11.436,
+      "end": 11.622
+    },
+    {
+      "word": "reliable",
+      "start": 11.691,
+      "end": 12.214
+    },
+    {
+      "word": "access",
+      "start": 12.26,
+      "end": 12.678
+    },
+    {
+      "word": "to",
+      "start": 12.713,
+      "end": 12.783
+    },
+    {
+      "word": "the",
+      "start": 12.852,
+      "end": 12.922
+    },
+    {
+      "word": "water",
+      "start": 12.957,
+      "end": 13.247
+    },
+    {
+      "word": "we",
+      "start": 13.305,
+      "end": 13.398
+    },
+    {
+      "word": "needed",
+      "start": 13.456,
+      "end": 13.723
+    },
+    {
+      "word": "to",
+      "start": 13.769,
+      "end": 13.839
+    },
+    {
+      "word": "survive.",
+      "start": 13.897,
+      "end": 15.279
     }
   ]
 }
