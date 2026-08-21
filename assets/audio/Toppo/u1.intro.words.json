@@ -1,344 +1,339 @@
 {
   "words": [
     {
-      "word": "Cadet,",
-      "start": 0,
-      "end": 0.511
-    },
-    {
       "word": "TK!",
-      "start": 0.546,
-      "end": 1.231
+      "start": 0,
+      "end": 0.813
     },
     {
       "word": "I",
-      "start": 1.672,
-      "end": 1.718
+      "start": 1.138,
+      "end": 1.184
     },
     {
       "word": "want",
-      "start": 1.8,
-      "end": 1.939
+      "start": 1.265,
+      "end": 1.416
     },
     {
       "word": "to",
-      "start": 1.974,
-      "end": 2.02
+      "start": 1.451,
+      "end": 1.509
     },
     {
       "word": "personally",
-      "start": 2.09,
-      "end": 2.566
+      "start": 1.579,
+      "end": 2.02
     },
     {
       "word": "congratulate",
-      "start": 2.612,
-      "end": 3.204
+      "start": 2.067,
+      "end": 2.67
     },
     {
       "word": "you",
-      "start": 3.228,
-      "end": 3.297
+      "start": 2.694,
+      "end": 2.763
     },
     {
       "word": "on",
-      "start": 3.367,
-      "end": 3.448
+      "start": 2.833,
+      "end": 2.926
     },
     {
       "word": "everything",
-      "start": 3.506,
-      "end": 3.866
+      "start": 2.995,
+      "end": 3.425
     },
     {
       "word": "you've",
-      "start": 3.901,
-      "end": 4.075
+      "start": 3.46,
+      "end": 3.646
     },
     {
       "word": "accomplished",
-      "start": 4.098,
-      "end": 4.609
+      "start": 3.669,
+      "end": 4.168
     },
     {
       "word": "on",
-      "start": 4.644,
-      "end": 4.714
+      "start": 4.214,
+      "end": 4.284
     },
     {
       "word": "WAT247.",
-      "start": 4.783,
-      "end": 5.956
+      "start": 4.342,
+      "end": 5.515
     },
     {
       "word": "When",
-      "start": 6.281,
-      "end": 6.444
+      "start": 5.898,
+      "end": 6.049
     },
     {
       "word": "we",
-      "start": 6.49,
-      "end": 6.583
+      "start": 6.084,
+      "end": 6.165
     },
     {
       "word": "first",
-      "start": 6.641,
-      "end": 6.885
+      "start": 6.223,
+      "end": 6.478
     },
     {
       "word": "arrived,",
-      "start": 6.92,
-      "end": 7.338
+      "start": 6.525,
+      "end": 7.082
     },
     {
       "word": "our",
-      "start": 7.361,
-      "end": 7.454
+      "start": 7.291,
+      "end": 7.465
     },
     {
       "word": "mission",
-      "start": 7.512,
-      "end": 7.79
+      "start": 7.523,
+      "end": 7.814
     },
     {
       "word": "was",
-      "start": 7.848,
-      "end": 7.953
+      "start": 7.86,
+      "end": 7.964
     },
     {
       "word": "on",
-      "start": 7.999,
-      "end": 8.069
+      "start": 8.022,
+      "end": 8.092
     },
     {
       "word": "the",
-      "start": 8.104,
-      "end": 8.173
+      "start": 8.127,
+      "end": 8.197
     },
     {
       "word": "verge",
-      "start": 8.22,
-      "end": 8.464
+      "start": 8.243,
+      "end": 8.51
     },
     {
       "word": "of",
-      "start": 8.487,
-      "end": 8.533
+      "start": 8.533,
+      "end": 8.591
     },
     {
       "word": "being",
-      "start": 8.58,
-      "end": 8.766
+      "start": 8.649,
+      "end": 8.847
     },
     {
       "word": "canceled.",
-      "start": 8.812,
-      "end": 9.439
+      "start": 8.905,
+      "end": 9.625
     },
     {
       "word": "But",
-      "start": 9.764,
-      "end": 9.915
+      "start": 10.228,
+      "end": 10.379
     },
     {
       "word": "you",
-      "start": 9.973,
-      "end": 10.066
+      "start": 10.426,
+      "end": 10.519
     },
     {
       "word": "gathered",
-      "start": 10.136,
-      "end": 10.507
+      "start": 10.6,
+      "end": 10.96
     },
     {
       "word": "evidence,",
-      "start": 10.565,
-      "end": 11.18
+      "start": 11.029,
+      "end": 11.68
     },
     {
       "word": "and",
-      "start": 11.273,
-      "end": 11.424
+      "start": 11.923,
+      "end": 12.074
     },
     {
       "word": "convinced",
-      "start": 11.494,
-      "end": 11.958
+      "start": 12.156,
+      "end": 12.62
     },
     {
       "word": "Mission",
-      "start": 12.028,
-      "end": 12.295
+      "start": 12.69,
+      "end": 12.957
     },
     {
       "word": "Control",
-      "start": 12.353,
-      "end": 12.84
+      "start": 13.015,
+      "end": 13.433
     },
     {
       "word": "that",
-      "start": 13.049,
-      "end": 13.224
+      "start": 13.491,
+      "end": 13.619
     },
     {
       "word": "water",
-      "start": 13.293,
-      "end": 13.642
+      "start": 13.688,
+      "end": 13.99
     },
     {
       "word": "existed",
-      "start": 13.711,
-      "end": 14.164
+      "start": 14.06,
+      "end": 14.536
     },
     {
       "word": "on",
-      "start": 14.222,
-      "end": 14.303
+      "start": 14.594,
+      "end": 14.687
     },
     {
       "word": "WAT247.",
-      "start": 14.361,
-      "end": 15.557
+      "start": 14.757,
+      "end": 15.941
     },
     {
       "word": "Because",
-      "start": 15.94,
-      "end": 16.3
+      "start": 16.324,
+      "end": 16.672
     },
     {
       "word": "of",
-      "start": 16.323,
-      "end": 16.382
+      "start": 16.695,
+      "end": 16.754
     },
     {
       "word": "your",
-      "start": 16.428,
-      "end": 16.544
+      "start": 16.788,
+      "end": 16.904
     },
     {
       "word": "work,",
-      "start": 16.602,
-      "end": 16.858
+      "start": 16.951,
+      "end": 17.183
     },
     {
       "word": "the",
-      "start": 16.881,
-      "end": 16.95
+      "start": 17.206,
+      "end": 17.276
     },
     {
       "word": "mission",
-      "start": 16.997,
-      "end": 17.264
+      "start": 17.322,
+      "end": 17.578
     },
     {
       "word": "continued,",
-      "start": 17.322,
-      "end": 18.042
+      "start": 17.636,
+      "end": 18.344
     },
     {
       "word": "and",
-      "start": 18.425,
-      "end": 18.587
+      "start": 18.588,
+      "end": 18.774
     },
     {
       "word": "every",
-      "start": 18.704,
-      "end": 19.029
+      "start": 18.867,
+      "end": 19.122
     },
     {
       "word": "discovery",
-      "start": 19.087,
-      "end": 19.551
+      "start": 19.18,
+      "end": 19.668
     },
     {
       "word": "that",
-      "start": 19.598,
-      "end": 19.714
+      "start": 19.714,
+      "end": 19.83
     },
     {
       "word": "followed",
-      "start": 19.772,
-      "end": 20.132
+      "start": 19.888,
+      "end": 20.213
     },
     {
       "word": "became",
-      "start": 20.166,
-      "end": 20.468
+      "start": 20.26,
+      "end": 20.585
     },
     {
       "word": "possible!",
-      "start": 20.515,
-      "end": 21.2
+      "start": 20.62,
+      "end": 21.363
     },
     {
       "word": "Let's",
-      "start": 22.5,
-      "end": 22.721
+      "start": 22.059,
+      "end": 22.28
     },
     {
       "word": "take",
-      "start": 22.755,
-      "end": 22.918
+      "start": 22.315,
+      "end": 22.466
     },
     {
       "word": "a",
-      "start": 22.941,
-      "end": 22.964
+      "start": 22.489,
+      "end": 22.512
     },
     {
       "word": "look",
-      "start": 22.999,
-      "end": 23.15
+      "start": 22.547,
+      "end": 22.698
     },
     {
       "word": "back",
-      "start": 23.208,
-      "end": 23.394
+      "start": 22.756,
+      "end": 22.988
     },
     {
       "word": "at",
-      "start": 23.452,
-      "end": 23.51
+      "start": 23.046,
+      "end": 23.104
     },
     {
       "word": "what",
-      "start": 23.545,
-      "end": 23.684
+      "start": 23.151,
+      "end": 23.278
     },
     {
       "word": "your",
-      "start": 23.731,
-      "end": 23.847
+      "start": 23.325,
+      "end": 23.452
     },
     {
       "word": "efforts",
-      "start": 23.905,
-      "end": 24.23
+      "start": 23.511,
+      "end": 23.894
     },
     {
       "word": "enabled",
-      "start": 24.276,
-      "end": 24.683
+      "start": 23.952,
+      "end": 24.323
     },
     {
       "word": "our",
-      "start": 24.717,
-      "end": 24.822
+      "start": 24.358,
+      "end": 24.463
     },
     {
       "word": "team",
-      "start": 24.88,
-      "end": 25.101
+      "start": 24.509,
+      "end": 24.741
     },
     {
       "word": "to",
-      "start": 25.17,
-      "end": 25.228
+      "start": 24.811,
+      "end": 24.869
     },
     {
       "word": "achieve.",
-      "start": 25.31,
-      "end": 26.099
+      "start": 24.95,
+      "end": 25.728
     }
   ]
 }

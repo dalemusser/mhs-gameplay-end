@@ -1,0 +1,11 @@
+- generic [ref=e1]:
+  - generic:
+    - generic:
+      - generic: Jasper
+      - generic: TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.
+    - generic [ref=e3]:
+      - button "Next ▶" [active] [ref=e4] [cursor=pointer]
+      - button "↻ Replay" [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

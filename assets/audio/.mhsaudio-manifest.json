@@ -178,7 +178,7 @@
       "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
     },
     "Toppo/end.award.mp3": {
-      "text": "85dbeaec9e95641b10a172775719ef62d88fc4e5",
+      "text": "9c45a4d8ac3dc6a381d26bd32825e5553c483c57",
       "voice": "zadbHdSgYi0Gxv83seiu",
       "model": "eleven_multilingual_v2",
       "format": "mp3_44100_128",
@@ -186,14 +186,15 @@
       "dict": "a3ff3421ad0fbeffab09b6b903349755153a63ed"
     },
     "Toppo/end.skills.mp3": {
-      "text": "8162932e435953565dbffe22ea9421fb88df6ade",
+      "text": "1669f1b9dc31199b3a001b659a8b901355e7de14",
       "voice": "zadbHdSgYi0Gxv83seiu",
       "model": "eleven_multilingual_v2",
       "format": "mp3_44100_128",
-      "words": true
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
     },
     "Toppo/u1.intro.mp3": {
-      "text": "fad48f6be74c2d3097b79fe5200f81562d437426",
+      "text": "8c3f7c92a9019738f68f631caf80fab927fd88eb",
       "voice": "zadbHdSgYi0Gxv83seiu",
       "model": "eleven_multilingual_v2",
       "format": "mp3_44100_128",

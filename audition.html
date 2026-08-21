@@ -64,7 +64,7 @@
   <p class="foot"><a href="index.html">← Test launcher</a> · clips: <code>assets/audio/&lt;Speaker&gt;/&lt;lineId&gt;.mp3</code></p>
 </div>
 
-<script src="ceremony-definition.js?v=4"></script>
+<script src="ceremony-definition.js?v=5"></script>
 <script>
 // display text per lineId, from the definition (same walk as tools/export-lines.cjs);
 // the manifest's words are the SPOKEN tokens — display and spoken always have equal
@@ -82,13 +82,9 @@ const DISPLAY = {}, SPOKEN_DIFFERS = {};
   (def.finale || []).forEach(add);
 })(window.CEREMONY_DEFINITION);
 
-// lines generated or re-generated in the script-v2 round (2026-08-04) — update per round
+// lines generated or re-generated in the script-v3 round (2026-08-05) — update per round
 const NEW_THIS_ROUND = new Set([
-  'u1.intro', 'u2.crash', 'u2.dani.a', 'u2.dani.b', 'u2.water.a', 'u2.water.b',
-  'u3.garden.a', 'u3.garden.b', 'u4.soil.a', 'u4.soil.b',
-  'u5.plant.a', 'u5.plant.b', 'u5.still.a', 'u5.still.b', 'u5.handoff',
-  'end.skills', 'end.award',
-  'sfx.fanfare-award', 'sfx.applause-small-group',
+  'u1.intro', 'end.skills', 'end.award',
 ]);
 const GROUP = id => id.startsWith('u1.') ? 'Intro / Unit 1'
   : id.startsWith('u2.') ? 'Unit 2 — Jasper'

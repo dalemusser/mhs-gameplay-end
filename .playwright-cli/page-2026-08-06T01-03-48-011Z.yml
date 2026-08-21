@@ -1,0 +1,128 @@
+- generic [ref=e2]:
+  - heading "Mission HydroSci — End-of-Game Ceremony · Test Launcher" [level=1] [ref=e3]
+  - paragraph [ref=e4]:
+    - text: Each card is a fictional student profile (
+    - code [ref=e5]: test-profiles/*.json
+    - text: ", same JSON shape the production score endpoint will return). Click one to watch the ceremony exactly as that student would see it. The chips below each card are computed live by the same condition resolver the ceremony uses, so they show precisely which line variant will play for each scored moment."
+  - generic [ref=e6]:
+    - generic [ref=e7]: A · best-case variant
+    - generic [ref=e8]: B · generic variant
+    - generic [ref=e9]: · letters are the script's standardized Condition A/B
+  - generic [ref=e10]:
+    - link "All High test-profiles/all-high.json Every score above threshold — the full victory-lap ceremony, every happy variant. Find Team · A DANI · A Water Source · A Crates · A Garden · A Soil · A Aryn's Plant · A Solar Still · A ▶ Launch ceremony" [ref=e11] [cursor=pointer]:
+      - /url: ceremony.html?profile=all-high
+      - heading "All High" [level=2] [ref=e12]
+      - generic [ref=e13]: test-profiles/all-high.json
+      - paragraph [ref=e14]: Every score above threshold — the full victory-lap ceremony, every happy variant.
+      - generic [ref=e15]:
+        - generic "\"but you found our missing team members quickly and helped us get the mission back on track…\"" [ref=e16]: Find Team · A
+        - generic "\"After DANI's argumentation system was broken, you restored it faster than expected and got…\"" [ref=e17]: DANI · A
+        - generic "\"One of your biggest decisions was evaluating the available water sources and selecting the…\"" [ref=e18]: Water Source · A
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you used what you kne…\"" [ref=e19]: Crates · A
+        - generic "\"Later, when our food supply was running low, you figured out the best places to plant supe…\"" [ref=e20]: Garden · A
+        - generic "\"You even used your understanding of soil infiltration to help identify the best soil type …\"" [ref=e21]: Soil · A
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e22]: Aryn's Plant · A
+        - generic "\"It was also because of your incredible work that we were able to properly set up the solar…\"" [ref=e23]: Solar Still · A
+      - generic [ref=e24]: ▶ Launch ceremony
+    - link "All Low test-profiles/all-low.json Every score below threshold — every gentle variant, encouraging tone throughout. Find Team · B DANI · B Water Source · B Crates · B Garden · B Soil · B Aryn's Plant · B Solar Still · B ▶ Launch ceremony" [ref=e25] [cursor=pointer]:
+      - /url: ceremony.html?profile=all-low
+      - heading "All Low" [level=2] [ref=e26]
+      - generic [ref=e27]: test-profiles/all-low.json
+      - paragraph [ref=e28]: Every score below threshold — every gentle variant, encouraging tone throughout.
+      - generic [ref=e29]:
+        - generic "\"but you found the missing team members and helped us get the mission back on track.…\"" [ref=e30]: Find Team · B
+        - generic "\"When DANI's argumentation system was broken, you worked hard to restore it.…\"" [ref=e31]: DANI · B
+        - generic "\"One of your biggest decisions was evaluating the available water sources. Even though it t…\"" [ref=e32]: Water Source · B
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you did your best to …\"" [ref=e33]: Crates · B
+        - generic "\"Later, when our food supply was running low, you worked to help us identify the best place…\"" [ref=e34]: Garden · B
+        - generic "\"You even worked with me to help identify the best soil type to use with our seedlings.…\"" [ref=e35]: Soil · B
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e36]: Aryn's Plant · B
+        - generic "\"You also did your best to help set up the solar still to convert sea water into drinkable …\"" [ref=e37]: Solar Still · B
+      - generic [ref=e38]: ▶ Launch ceremony
+    - link "Mixed A test-profiles/mixed-a.json Alternating high/low (team-finding high, DANI low, …) — checks mid-show tone shifts. Find Team · A DANI · B Water Source · A Crates · B Garden · A Soil · B Aryn's Plant · A Solar Still · B ▶ Launch ceremony" [ref=e39] [cursor=pointer]:
+      - /url: ceremony.html?profile=mixed-a
+      - heading "Mixed A" [level=2] [ref=e40]
+      - generic [ref=e41]: test-profiles/mixed-a.json
+      - paragraph [ref=e42]: Alternating high/low (team-finding high, DANI low, …) — checks mid-show tone shifts.
+      - generic [ref=e43]:
+        - generic "\"but you found our missing team members quickly and helped us get the mission back on track…\"" [ref=e44]: Find Team · A
+        - generic "\"When DANI's argumentation system was broken, you worked hard to restore it.…\"" [ref=e45]: DANI · B
+        - generic "\"One of your biggest decisions was evaluating the available water sources and selecting the…\"" [ref=e46]: Water Source · A
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you did your best to …\"" [ref=e47]: Crates · B
+        - generic "\"Later, when our food supply was running low, you figured out the best places to plant supe…\"" [ref=e48]: Garden · A
+        - generic "\"You even worked with me to help identify the best soil type to use with our seedlings.…\"" [ref=e49]: Soil · B
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e50]: Aryn's Plant · A
+        - generic "\"You also did your best to help set up the solar still to convert sea water into drinkable …\"" [ref=e51]: Solar Still · B
+      - generic [ref=e52]: ▶ Launch ceremony
+    - link "Mixed B test-profiles/mixed-b.json The inverse alternation of Mixed A — covers the other half of the variant pairs. Find Team · B DANI · A Water Source · B Crates · A Garden · B Soil · A Aryn's Plant · B Solar Still · A ▶ Launch ceremony" [ref=e53] [cursor=pointer]:
+      - /url: ceremony.html?profile=mixed-b
+      - heading "Mixed B" [level=2] [ref=e54]
+      - generic [ref=e55]: test-profiles/mixed-b.json
+      - paragraph [ref=e56]: The inverse alternation of Mixed A — covers the other half of the variant pairs.
+      - generic [ref=e57]:
+        - generic "\"but you found the missing team members and helped us get the mission back on track.…\"" [ref=e58]: Find Team · B
+        - generic "\"After DANI's argumentation system was broken, you restored it faster than expected and got…\"" [ref=e59]: DANI · A
+        - generic "\"One of your biggest decisions was evaluating the available water sources. Even though it t…\"" [ref=e60]: Water Source · B
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you used what you kne…\"" [ref=e61]: Crates · A
+        - generic "\"Later, when our food supply was running low, you worked to help us identify the best place…\"" [ref=e62]: Garden · B
+        - generic "\"You even used your understanding of soil infiltration to help identify the best soil type …\"" [ref=e63]: Soil · A
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e64]: Aryn's Plant · B
+        - generic "\"It was also because of your incredible work that we were able to properly set up the solar…\"" [ref=e65]: Solar Still · A
+      - generic [ref=e66]: ▶ Launch ceremony
+    - link "Boundary test-profiles/boundary.json Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs. Find Team · A DANI · A Water Source · A Crates · A Garden · A Soil · A Aryn's Plant · A Solar Still · A ▶ Launch ceremony" [ref=e67] [cursor=pointer]:
+      - /url: ceremony.html?profile=boundary
+      - heading "Boundary" [level=2] [ref=e68]
+      - generic [ref=e69]: test-profiles/boundary.json
+      - paragraph [ref=e70]: Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs.
+      - generic [ref=e71]:
+        - generic "\"but you found our missing team members quickly and helped us get the mission back on track…\"" [ref=e72]: Find Team · A
+        - generic "\"After DANI's argumentation system was broken, you restored it faster than expected and got…\"" [ref=e73]: DANI · A
+        - generic "\"One of your biggest decisions was evaluating the available water sources and selecting the…\"" [ref=e74]: Water Source · A
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you used what you kne…\"" [ref=e75]: Crates · A
+        - generic "\"Later, when our food supply was running low, you figured out the best places to plant supe…\"" [ref=e76]: Garden · A
+        - generic "\"You even used your understanding of soil infiltration to help identify the best soil type …\"" [ref=e77]: Soil · A
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e78]: Aryn's Plant · A
+        - generic "\"It was also because of your incredible work that we were able to properly set up the solar…\"" [ref=e79]: Solar Still · A
+      - generic [ref=e80]: ▶ Launch ceremony
+    - link "Partial (through Unit 3) test-profiles/partial.json Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant. Find Team · B DANI · A Water Source · A Crates · A Garden · B Soil · B Aryn's Plant · B Solar Still · B ▶ Launch ceremony" [ref=e81] [cursor=pointer]:
+      - /url: ceremony.html?profile=partial
+      - heading "Partial (through Unit 3)" [level=2] [ref=e82]
+      - generic [ref=e83]: test-profiles/partial.json
+      - paragraph [ref=e84]: Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant.
+      - generic [ref=e85]:
+        - generic "\"but you found the missing team members and helped us get the mission back on track.…\"" [ref=e86]: Find Team · B
+        - generic "\"After DANI's argumentation system was broken, you restored it faster than expected and got…\"" [ref=e87]: DANI · A
+        - generic "\"One of your biggest decisions was evaluating the available water sources and selecting the…\"" [ref=e88]: Water Source · A
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you used what you kne…\"" [ref=e89]: Crates · A
+        - generic "\"Later, when our food supply was running low, you worked to help us identify the best place…\"" [ref=e90]: Garden · B
+        - generic "\"You even worked with me to help identify the best soil type to use with our seedlings.…\"" [ref=e91]: Soil · B
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e92]: Aryn's Plant · B
+        - generic "\"You also did your best to help set up the solar still to convert sea water into drinkable …\"" [ref=e93]: Solar Still · B
+      - generic [ref=e94]: ▶ Launch ceremony
+    - link "No Data test-profiles/no-data.json No scores at all (grader lag / never played) — the whole ceremony on fallback variants. Find Team · B DANI · B Water Source · B Crates · B Garden · B Soil · B Aryn's Plant · B Solar Still · B ▶ Launch ceremony" [ref=e95] [cursor=pointer]:
+      - /url: ceremony.html?profile=no-data
+      - heading "No Data" [level=2] [ref=e96]
+      - generic [ref=e97]: test-profiles/no-data.json
+      - paragraph [ref=e98]: No scores at all (grader lag / never played) — the whole ceremony on fallback variants.
+      - generic [ref=e99]:
+        - generic "\"but you found the missing team members and helped us get the mission back on track.…\"" [ref=e100]: Find Team · B
+        - generic "\"When DANI's argumentation system was broken, you worked hard to restore it.…\"" [ref=e101]: DANI · B
+        - generic "\"One of your biggest decisions was evaluating the available water sources. Even though it t…\"" [ref=e102]: Water Source · B
+        - generic "\"When I needed help getting my lost equipment crates back to my base, you did your best to …\"" [ref=e103]: Crates · B
+        - generic "\"Later, when our food supply was running low, you worked to help us identify the best place…\"" [ref=e104]: Garden · B
+        - generic "\"You even worked with me to help identify the best soil type to use with our seedlings.…\"" [ref=e105]: Soil · B
+        - generic "\"Hey, TK- I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you…\"" [ref=e106]: Aryn's Plant · B
+        - generic "\"You also did your best to help set up the solar still to convert sea water into drinkable …\"" [ref=e107]: Solar Still · B
+      - generic [ref=e108]: ▶ Launch ceremony
+  - paragraph [ref=e109]:
+    - link "▶ Production default" [ref=e110] [cursor=pointer]:
+      - /url: ceremony.html
+    - text: — no profile parameter; the ceremony fetches real scores (until that endpoint exists, it behaves like No Data).
+    - link "🎧 Audio audition" [ref=e111] [cursor=pointer]:
+      - /url: audition.html
+    - text: — every voice line, click to play, karaoke-timing check.
+    - text: Serve this folder with any static server (e.g.
+    - code [ref=e112]: python3 -m http.server 8000
+    - text: ) — fetches fail over
+    - code [ref=e113]: file://
+    - text: .

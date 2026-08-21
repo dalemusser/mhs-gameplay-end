@@ -1,11 +1,26 @@
 # Script v3 Update Plan
 
+> **Status 2026-08-05: implemented.** Definition on v3 text (intro "TK!",
+> conclusion "TK,", award line reworded, U5.C4 `> 0`); resolver passes `stars`
+> onto the ending beat; star pop-up built (staggered reveals, labels per
+> script, sits under the fade); trophy staged (poly.pizza CC0 GLB, 44 KB,
+> normalized to 0.95 m) and presented center-stage with rise/spin/warm
+> spotlight during the cheer, before the pop-up; fixtures/tests updated
+> (24 green; boundary solar-still 0.5 → A); 3 lines re-voiced (only 3 billed);
+> grader brief updated (solar still resolved w/ detection caveat, stars bands,
+> U2.C3 open note); cache-busters bumped (def v5, player v5, resolver v2);
+> browser-verified end-to-end in an isolated mock (no served-file swaps this
+> time) plus the real app. **Audition passed and v0.1.3 LIVE 2026-08-05** at
+> `https://cdn.adroit.games/mhs/end/v0.1.3/index.html` — all 92 files sweep 200,
+> manifest matches the approved takes, launcher + ceremony verified on the CDN.
+> Round closed.
+
 *2026-08-05. Sources: `designer-content/End of Game Script v3.md`,
 `designer-content/MHS 2.0 Embedded Assessment Working Doc v2.md` (both vendored),
 Erin's answers to `docs/designer-requests-v2.md`, and the teammate's follow-up
-notes. Supersedes the pending items in `docs/script-v2-plan.md`. These changes
-fold into the **still-unpublished v0.2.0** bundle (v0.1.1 remains the live CDN
-preview).*
+notes. Supersedes the pending items in `docs/script-v2-plan.md`. Versioning:
+the v2-script build (with audio fixes, SFX, overlapped transitions) is live as
+**v0.1.2**; these changes ship as **v0.1.3**.*
 
 ## 1. What the responses resolved
 

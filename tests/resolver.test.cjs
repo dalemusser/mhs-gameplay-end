@@ -149,6 +149,14 @@ test('every spoken line — including unplayed variants — has a clip in the au
     'every manifest item needs a duration and word timings');
 });
 
+test('stars pass through onto the ending beat for the pop-up', () => {
+  assert.deepStrictEqual(resolve(REAL, ALL_HIGH).beats[19].stars,
+    { unit2: 3, unit3: 3, unit4: 3, unit5: 3 });
+  assert.deepStrictEqual(resolve(REAL, PARTIAL).beats[19].stars,
+    { unit2: 2, unit3: 2 });                                  // unplayed units absent → empty stars
+  assert.deepStrictEqual(resolve(REAL, NO_DATA).beats[19].stars, {});
+});
+
 test('every resolved beat with text carries a lineId (audio join key)', () => {
   for (const profile of [ALL_HIGH, ALL_LOW]) {
     const r = resolve(REAL, profile);

@@ -1,0 +1,11 @@
+- generic [ref=e1]:
+  - generic:
+    - generic:
+      - generic: Jasper
+      - generic: One of your biggest decisions was evaluating the available water sources and selecting the best location for our new base. That decision gave our team reliable access to the water we needed to survive!
+    - generic [ref=e3]:
+      - button "Next ▶" [active] [ref=e4] [cursor=pointer]
+      - button "↻ Replay" [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

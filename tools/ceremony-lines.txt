@@ -1,4 +1,4 @@
-u1.intro | Toppo: Cadet, TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.
+u1.intro | Toppo: TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.
 u2.crash | Jasper: TK, after the Copernicus crash-landed, our mission could have ended right there.
 u2.find-team.a | Jasper: but you found our missing team members quickly and helped us get the mission back on track.
 u2.find-team.b | Jasper: but you found the missing team members and helped us get the mission back on track.
@@ -23,5 +23,5 @@ u5.plant.b | Aryn: Hey, TK, I was so convinced that aliens had stolen water from
 u5.still.a | Aryn: It was also because of your incredible work that we were able to properly set up the solar still to convert sea water into drinkable water. Now we'll have the fresh water we need!
 u5.still.b | Aryn: You also did your best to help set up the solar still to convert sea water into drinkable water. Though it's not perfect yet, I know your work will help us get closer to having enough fresh water for everyone.
 u5.handoff | Aryn: I think Captain Toppo has one final thing to show you.
-end.skills | Toppo: Cadet. Throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.
-end.award | Toppo: Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the title Planetary Water Steward!
+end.skills | Toppo: TK, throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.
+end.award | Toppo: Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the Planetary Water Steward award!

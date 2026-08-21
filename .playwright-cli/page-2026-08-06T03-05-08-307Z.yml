@@ -1,0 +1,11 @@
+- generic [ref=e1]:
+  - generic:
+    - generic:
+      - generic: Aryn
+      - generic: It was also because of your incredible work that we were able to properly set up the solar still to convert sea water into drinkable water. Now we'll have the fresh water we need!
+    - generic [ref=e3]:
+      - button "Next ▶" [active] [ref=e4] [cursor=pointer]
+      - button "↻ Replay" [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

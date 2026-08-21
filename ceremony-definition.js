@@ -42,13 +42,11 @@
     {
       lineId: 'u1.intro', speaker: 'Toppo', expression: 'proud', startAtMark: true,
       holo: { images: ['unit1/CopernicusSpaceShipImage.jpg', 'unit1/WAT247.jpg'] },
-      // speakText: the SPOKEN text has "Cadet, TK!" — the voice garbles an opening
-      // vocative "Cadet" without the comma (same fix as the old demo intro; goes
-      // with the stability 0.60 override in tools/voice-overrides.json). The
-      // displayed text keeps the script's "Cadet TK!". Token counts must match
-      // so the karaoke stays aligned (guarded by export-lines).
-      speakText: "Cadet, TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.",
-      text: "Cadet TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.",
+      // v3 script dropped "Cadet" from the opener (title references removed) —
+      // which also retires the old speakText comma workaround. The stability 0.60
+      // override in tools/voice-overrides.json stays. If the bare "TK!" opener
+      // ever garbles like "Hey, TK-" did, speakText with "TK," is the fix.
+      text: "TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.",
     },
   ],
 
@@ -232,11 +230,12 @@
                 holo: { images: ['unit5/Aryn_s plant outside.jpg', 'unit5/Aryn_s plant.jpg', 'unit5/Inside Aryn plant.jpg'] },
               } },
           ] },
-        // solar still — PROVISIONAL: script says U5.C5 ≥ 1, but the EA doc's solar
-        // still is U5.C4 with pre-rework points (docs/designer-requests-v2.md item 1)
+        // solar still — U5.C4 (designer-confirmed; v2 script's "C5" was a typo).
+        // One-chance EA scoring: three ½-point selections, max 1.5; any correct
+        // selection (> 0) earns the A variant.
         { id: 'u5.still',
           conditions: [
-            { when: { item: 'U5.C5', op: '>=', value: 1 },
+            { when: { item: 'U5.C4', op: '>', value: 0 },
               beat: {
                 lineId: 'u5.still.a', expression: 'happy',
                 text: "It was also because of your incredible work that we were able to properly set up the solar still to convert sea water into drinkable water. Now we'll have the fresh water we need!",
@@ -272,26 +271,26 @@
               'Protected water resources',
               'Supported life on WAT247',
             ] },
-            text: "Cadet. Throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.",
+            text: "TK, throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.",
           } },
         // no holo → the highlights stay up during the award line.
-        // "Planetary Water Steward" pending Joshua; star system pending Eric.
         { id: 'end.award',
           always: {
             lineId: 'end.award', expression: 'proud',
-            text: "Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the title Planetary Water Steward!",
+            text: "Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the Planetary Water Steward award!",
           } },
       ],
     },
   ],
 
   // ================================================================ ENDING
-  // "Toppo presents players with a medal. NPCs clap and cheer. Fade to black."
-  // Award card stands in for the medal until an asset arrives; `ending: 'fade'`
-  // makes the player fade to black and finish instead of advancing.
+  // v3 script: "Toppo presents players with a trophy. NPCs clap and cheer." →
+  // star pop-up ("Congratulations! You completed the mission." + per-unit stars)
+  // → fade to black. The resolver attaches `stars` from the EA scores to this
+  // beat; `ending: 'fade'` runs the celebrate → stars → fade sequence.
   celebration: {
     gesture: 'cheer', expression: 'happy', fx: 'confetti',
-    holo: { title: 'PLANETARY WATER STEWARD', subtitle: 'Awarded to Cadet TK — Mission HydroSci' },
+    holo: { title: 'PLANETARY WATER STEWARD', subtitle: 'Awarded to TK — Mission HydroSci' },
     advance: 'auto', duration: 6, ending: 'fade',
   },
 
