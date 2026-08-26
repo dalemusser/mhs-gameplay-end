@@ -1,0 +1,34 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - button "↺ Restart" [active] [ref=e12] [cursor=pointer]
+    - button "↻ Replay" [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"
+  - generic:
+    - generic: Congratulations!
+    - generic: You completed the mission.
+    - generic:
+      - generic: Topography
+      - generic:
+        - generic: ★
+        - generic: ★
+        - generic: ★
+    - generic:
+      - generic: Surface Water
+      - generic:
+        - generic: ★
+        - generic: ★
+        - generic: ★
+    - generic:
+      - generic: Ground Water
+      - generic:
+        - generic: ★
+        - generic: ★
+        - generic: ★
+    - generic:
+      - generic: Water Cycle
+      - generic:
+        - generic: ★
+        - generic: ★
+        - generic: ★

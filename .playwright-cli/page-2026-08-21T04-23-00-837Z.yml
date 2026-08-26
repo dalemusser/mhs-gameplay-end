@@ -1,0 +1,7 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - button "↺ Restart" [disabled] [ref=e9]
+    - button "↻ Replay" [disabled] [ref=e5]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"

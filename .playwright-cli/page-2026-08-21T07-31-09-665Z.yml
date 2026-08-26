@@ -1,0 +1,12 @@
+- generic [ref=e1]:
+  - generic:
+    - generic:
+      - generic: Toppo
+      - generic: Most importantly, you've shown how understanding water helps us make decisions that affect people, ecosystems, and entire communities. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the Planetary Water Steward award!
+    - generic [ref=e3]:
+      - button "Next ▶" [ref=e72] [cursor=pointer]
+      - button "↻ Replay" [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"
+  - button "☰ Beats" [ref=e9] [cursor=pointer]

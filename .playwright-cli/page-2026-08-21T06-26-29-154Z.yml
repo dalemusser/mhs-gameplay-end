@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - generic: Tera
+      - generic: Walking to the stage.
+    - generic [ref=e3]:
+      - button "Next ▶" [disabled] [ref=e4]
+      - button "↻ Replay" [disabled] [ref=e5]
+  - generic [ref=e6]: F = free camera · R = restart
+  - generic:
+    - button "▶ Begin Ceremony"
+  - button "☰ Beats" [ref=e9] [cursor=pointer]
+  - generic [ref=e10]:
+    - generic [ref=e51] [cursor=pointer]: 00 · Toppo · u1.intro · TK! I want to personally congratulate you on
+    - generic [ref=e52] [cursor=pointer]: 01 · Jasper · u2.crash · TK, after the Copernicus crash-landed, our m
+    - generic [ref=e53] [cursor=pointer]: 02 · Jasper · u2.find-team.a · but you found our missing team members quick
+    - generic [ref=e54] [cursor=pointer]: 03 · Jasper · u2.dani.a · After DANI's argumentation system was broken
+    - generic [ref=e55] [cursor=pointer]: 04 · Jasper · u2.water.a · One of your biggest decisions was evaluating
+    - generic [ref=e56] [cursor=pointer]: 05 · Jasper · u2.thanks · Thank you for everything you did, TK. Tera's
+    - generic [ref=e57] [cursor=pointer]: 06 · Tera · u3.crates.a · When I needed help getting my lost equipment
+    - generic [ref=e58] [cursor=pointer]: 07 · Tera · u3.pollution · And when our water supply was in danger, you
+    - generic [ref=e59] [cursor=pointer]: 08 · Tera · u3.garden.a · Later, when our food supply was running low,
+    - generic [ref=e60] [cursor=pointer]: 09 · Tera · u3.thanks · We couldn't have done it without you. Thank
+    - generic [ref=e61] [cursor=pointer]: 10 · Anderson · u4.well · TK, you applied your knowledge of groundwate
+    - generic [ref=e62] [cursor=pointer]: 11 · Anderson · u4.flood · And when my underground bunker began floodin
+    - generic [ref=e63] [cursor=pointer]: 12 · Anderson · u4.soil.a · You even used your understanding of soil inf
+    - generic [ref=e64] [cursor=pointer]: 13 · Anderson · u4.thanks · Your hard work is appreciated, TK!
+    - generic [ref=e65] [cursor=pointer]: 14 · Aryn · u5.plant.a · Hey, TK- I was so convinced that aliens had
+    - generic [ref=e66] [cursor=pointer]: 15 · Aryn · u5.still.a · It was also because of your incredible work
+    - generic [ref=e67] [cursor=pointer]: 16 · Aryn · u5.handoff · I think Captain Toppo has one final thing to
+    - generic [ref=e68] [cursor=pointer]: 17 · Toppo · end.skills · TK, throughout this mission, you've demonstr
+    - generic [ref=e69] [cursor=pointer]: 18 · Toppo · end.award · Most importantly, you've shown how understan
+    - generic [ref=e70] [cursor=pointer]: 19 · ★ CELEBRATION · PLANETARY WATER STEWARD

@@ -1,10 +1,13 @@
 # Ceremony Visual v2 — Presentation Redesign Plan
 
-*Status: Stage 1 IMPLEMENTED (2026-08-05, Playwright-verified, awaiting Dale's
-audition); Stages 2–4 pending. Implementation happens in `ceremony_v2.html` +
-`lib/player_v2.js` only; `ceremony.html` + `lib/player.js` stay untouched as the
-v1 rollback. Content (`ceremony-definition.js`, resolver, audio manifest) is
-shared and unchanged.*
+*Status (2026-08-21): ALL STAGES SHIPPED. The full arc (Stages 1–4 plus the
+rounds Dale's auditions added) went out as visual v4 (`player_v4.js?v=30`) in
+**dist/v0.1.6**, launcher flipped to v4. The WORKING pair is now
+`ceremony_v5.html` + `lib/player_v5.js` — all new changes go there (bump its
+`?v=` on every edit). v1–v4 are frozen rollbacks. Only remaining unbuilt idea
+from this plan: per-unit signature colours (Stage 3's second half), parked.
+Content (`ceremony-definition.js`, resolver, audio manifest) unchanged
+throughout. History below is the round-by-round log.*
 
 ## Why
 
@@ -205,3 +208,66 @@ Retired the floating holo entirely: MISSION HIGHLIGHTS and the award card now
 draw directly on the WALL hero screen (drawHighlights/drawSlide retargeted to
 heroTex at 1280×720, layouts rescaled). One display surface, no parallax. The
 holo machinery (shader/bezel/cone/dust) remains in code but never enables.
+
+## v4 round — camera grammar, transitions, intro, music (2026-08-20)
+
+Dale's scope for the round after v0.1.5 (`ceremony_v4.html` + `lib/player_v4.js`,
+cloned from v3; ships as v0.1.6): (1) more camera movement — side/top-down/panning
+TV coverage; (2) speaker walk-up/walk-back transitions feel like dead time — fix
+with camera coverage AND transition music; (3) an overall music plan on the
+awards-show grammar (voice dry, music everywhere else) — see docs/music-plan.md
+(cue sheet + Suno prompts; style: teen-friendly instrumental electronic pop);
+(4) an intro/cold open before Toppo's first line (= Stage 3's boot-up, pulled
+forward; per-unit signature colours stay parked).
+
+Order: music plan doc first (unblocks Dale's Suno generation lead time) → Stage 2
+camera grammar incl. walk-up coverage → intro cold open → wire music/SFX as
+approved tracks land (every cue degrades to silence while missing).
+
+Round log (shipped at ?v=30 in dist/v0.1.6 — all four goals COMPLETE, plus
+ending/results/intro/logo rounds from Dale's audition feedback): camera grammar landed ?v=3 (cuts, shot cycling, follow coverage);
+music wired ?v=4 (cues from Dale's Suno picks, docs/music-plan.md); ?v=5 arrival
+grammar (pre-arrival groove fade, welcome applause, settle beat — Dale: the old
+duck-at-line-start was abrupt); ?v=6–8 ending rebuild (Dale: silent cheering over
+Toppo's walk home + stars covering the trophy): the ending celebration launches
+everything AT ONCE on beat entry, the announcer stays at the podium, the trophy
+rises beside them, and the stars moment cuts to a locked near-frontal `results`
+shot with the pop-up pinned left — trophy centre, presenter right. Lesson: the
+results view axis must run perpendicular to the presenter→trophy line, verified
+with Vector3.Project, not assumed (an angled shot stacked them behind the panel).
+Later same arc: results moved AGAIN — onto the wall hero screen as a game-style
+results board (star slots pop row-by-row, trophy icon zings into an AWARD EARNED
+badge; DOM pop-up deleted, camera freed to a continuous pendulum sweep); award
+line auto-flows into the celebration; end screen text + Replay-the-award.
+COLD OPEN landed (?v=19, Stage 3's opening realised + Dale's company-tableau
+idea): pre-Begin the stage waits DARK with the whole cast in a centre-stage
+FORMATION; Begin → m1 build under a high crane while the set ignites by element
+group (columns → podium/floor → rig → wall) and the real lights come up last so
+the company emerges from darkness; at the impact (7s) the MISSION HYDROSCI
+title blooms with a wall pulse and the group disperses to their marks (Toppo
+steps up to the podium) under the crane-down; the first line gates on everyone
+being placed, then m1 fades + settle. R/dev-jumps skip the intro
+(first-impression piece). startAtMark pre-placement superseded by the tableau.
+
+Final rounds to ship (?v=20–30): tableau MINGLE — statues read as broken, so
+until the dispersal the pairs face each other trading Talking1/2/3/TalkUpbeat
+vs Listen/Idle/Fidget clips on independent drifting clocks, every clip started
+at a random phase, while Toppo works the room. **GestureUp is BANNED from group
+mingling** — its raised-arm point, done in unison, read as a fascist salute
+(Dale's catch). Wall-inheritance fix: jumps (dev panel / end-Replay) into a
+no-holo beat reconstruct the inherited wall at its finished state via
+`wallHolo` staleness detection (the stars board had been bleeding under the
+award line). Award announcement now holds on the lower-third through the WHOLE
+celebration; mid-intro dev-jumps duck m1 immediately. MHS LOGO dressing
+(assets/logo/mhs-logo.png, `EMBLEM_LOGO` const gates all of it; droplet code
+kept): overhead above the truss (replacing the drawn water drop), both LED
+wings, the podium top (floor decal needs rotation.z π or it reads upside-down
+from the house), and a fade-up end card out of the final black. Shipped
+2026-08-21 as dist/v0.1.6 (105 files; + music cues, trophy-zing, re-cut unit1
+images; launcher→v4).
+
+## v5 (working) — post-ship log
+
+- ?v=2 `restartShow()`: the end screen's ↺ Restart replays the FULL show incl.
+  the cold open (skipping to Toppo felt like starting mid-show — Dale); Begin
+  shares the same path. The R key stays the quick intro-skipping restart.

@@ -56,9 +56,10 @@
   <div class="grid" id="grid"></div>
 
   <p class="foot">
-    <a href="ceremony_v3.html" target="_blank" rel="noopener">▶ Production default</a> — no profile parameter; the ceremony fetches real
+    <a href="ceremony_v4.html" target="_blank" rel="noopener">▶ Production default</a> — no profile parameter; the ceremony fetches real
     scores (until that endpoint exists, it behaves like No&nbsp;Data).<br>
     Previous layouts, kept for comparison (add <code>?profile=…</code> to launch with any card's profile):
+    <a href="ceremony_v3.html" target="_blank" rel="noopener">◀ v3 dimensional stage</a> ·
     <a href="ceremony_v2.html" target="_blank" rel="noopener">◀ v2 TV stage</a> ·
     <a href="ceremony.html" target="_blank" rel="noopener">◀ v1 holo backdrop</a><br>
     <a href="audition.html">🎧 Audio audition</a> — every voice line, click to play, karaoke-timing check.<br>
@@ -104,7 +105,7 @@ const grid = document.getElementById('grid');
 PROFILES.forEach(async p => {
   const card = document.createElement('a');
   card.className = 'card';
-  card.href = 'ceremony_v3.html?profile=' + encodeURIComponent(p.file);   // latest layout (v3 dimensional stage)
+  card.href = 'ceremony_v4.html?profile=' + encodeURIComponent(p.file);   // latest layout (v4: cold open, camera grammar, music, logo dressing)
   card.target = '_blank'; card.rel = 'noopener';   // ceremony opens in its own tab; the launcher stays put
   card.innerHTML = '<h2>' + p.title + '</h2>'
     + '<div class="file">test-profiles/' + p.file + '.json</div>'

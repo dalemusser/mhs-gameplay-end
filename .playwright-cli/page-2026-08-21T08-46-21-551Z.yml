@@ -1,0 +1,9 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - button "Next ▶" [ref=e4] [cursor=pointer]
+    - button "↻ Replay" [ref=e5] [cursor=pointer]
+  - generic [ref=e6]: F = free camera · R = restart
+  - button "Loading…" [disabled] [ref=e8]
+  - generic:
+    - img
+  - button "☰ Beats" [ref=e9] [cursor=pointer]

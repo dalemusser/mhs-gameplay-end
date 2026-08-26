@@ -29,14 +29,17 @@
   #bubbleText { font-size: 17px; line-height: 1.45; color: #b9c6da; min-height: 50px; }
   #bubbleText .w { transition: color .12s, text-shadow .12s; }
   #bubbleText .w.spoken { color: #ffffff; text-shadow: 0 0 12px rgba(120,200,255,0.8); }
+  /* stage-direction status ("Walking to the stage.") — visually distinct from dialogue */
+  #bubbleText .status { font-style: italic; color: #7286a0; }
 
   #controls { display: flex; flex-direction: column; gap: 8px; pointer-events: auto; }
   button.ctl { background: rgba(20,40,70,0.8); color: #dfe6f0; border: 1px solid #3d6fa0;
     border-radius: 8px; padding: 8px 14px; width: 118px; white-space: nowrap;
-    font-size: 14px; cursor: pointer; transition: background .12s; }
-  button.ctl:hover { background: rgba(40,72,116,0.95); border-color: #5b9bff; }
+    font-size: 14px; cursor: pointer; transition: background .12s, opacity .2s; }
+  button.ctl:hover:not(:disabled) { background: rgba(40,72,116,0.95); border-color: #5b9bff; }
   button.ctl.primary { background: #2b6fb8; border-color: #5b9bff; font-weight: 600; }
-  button.ctl.primary:hover { background: #357fce; }
+  button.ctl.primary:hover:not(:disabled) { background: #357fce; }
+  button.ctl:disabled { opacity: 0.4; cursor: default; }
   #hint { position: fixed; top: 10px; left: 12px; font-size: 11px; color: #46566e; }
   /* start gate — a user gesture is required before browsers allow audio */
   #startOverlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
@@ -70,7 +73,7 @@
 <script src="lib/gaze.js?v=5"></script>
 <script src="lib/headlook.js?v=5"></script>
 <script src="lib/resolver.js?v=2"></script>
-<script src="lib/player_v4.js?v=1"></script>
+<script src="lib/player_v4.js?v=30"></script>
 <script src="ceremony-definition.js?v=5"></script>
 <script>
 // Boot: pick the EA-score source, resolve the definition into a linear script, and
