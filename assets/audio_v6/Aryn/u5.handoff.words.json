@@ -1,0 +1,59 @@
+{
+  "words": [
+    {
+      "word": "I",
+      "start": 0,
+      "end": 0.093
+    },
+    {
+      "word": "think",
+      "start": 0.163,
+      "end": 0.302
+    },
+    {
+      "word": "Captain",
+      "start": 0.337,
+      "end": 0.604
+    },
+    {
+      "word": "Toppo",
+      "start": 0.65,
+      "end": 0.964
+    },
+    {
+      "word": "has",
+      "start": 1.022,
+      "end": 1.173
+    },
+    {
+      "word": "one",
+      "start": 1.265,
+      "end": 1.451
+    },
+    {
+      "word": "final",
+      "start": 1.498,
+      "end": 1.765
+    },
+    {
+      "word": "thing",
+      "start": 1.8,
+      "end": 1.95
+    },
+    {
+      "word": "to",
+      "start": 1.985,
+      "end": 2.032
+    },
+    {
+      "word": "show",
+      "start": 2.067,
+      "end": 2.252
+    },
+    {
+      "word": "you.",
+      "start": 2.334,
+      "end": 2.833
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+u1.intro | Toppo: TK! I want to personally congratulate you on everything you've accomplished on WAT247. When we first arrived, our mission was on the verge of being canceled. But you gathered evidence, and convinced Mission Control that water existed on WAT247. Because of your work, the mission continued, and every discovery that followed became possible! Let's take a look back at what your efforts enabled our team to achieve.
+u2.crash | Jasper: TK, after the Copernicus crash-landed, our mission could have ended right there.
+u2.find-team.a | Jasper: but you demonstrated your knowledge of topography and used the map to find our missing team members quickly and helped us get the mission back on track.
+u2.find-team.b | Jasper: but you found the missing team members and helped us get the mission back on track.
+u2.dani.a | Jasper: After DANI's argumentation system was broken, you were able to successfully identify claims, evidence and reasoning in arguments and got him back online in no time.
+u2.dani.b | Jasper: When DANI's argumentation system was broken, you worked hard to identify claims, evidence and reasoning.
+u2.water.a | Jasper: One of your biggest decisions was evaluating the available watersheds and topography to select the best location for our new base. That decision gave our team reliable access to the water we needed to survive!
+u2.water.b | Jasper: One of your biggest decisions was evaluating the available watersheds. Even though it took a few tries you eventually selected the best location for our new base. That decision gave our team reliable access to the water we needed to survive.
+u2.thanks | Jasper: Thank you for everything you did, TK. Tera's been waiting to thank you too.
+u3.crates.a | Tera: When I needed help getting my lost equipment crates back to my base, you used what you knew about surface water flowing from upper to lower elevations and topography to safely float them down the river.
+u3.crates.b | Tera: When I needed help getting my lost equipment crates back to my base, you did your best to help float them from higher to lower elevations down the river. Even though some misunderstandings about surface water flow meant we couldn't recover every crate, I appreciated your willingness to help.
+u3.pollution | Tera: And when our water supply was in danger, you helped me track down the ship battery that was contaminating our waterways. Once it was removed, we finally had access to clean water.
+u3.garden.a | Tera: Later, when our food supply was running low, you figured out the best places to plant superfruit using what you knew about how dissolved materials move through watersheds. Your decisions allowed the plants to thrive and produce enough food to support the mission!
+u3.garden.b | Tera: Later, when our food supply was running low, you worked to help us identify the best places to plant superfruit downstream from the super nutrient. Although some of your garden plot choices didn't work out as planned, your efforts helped us learn more about how nutrients move through the watershed.
+u3.thanks | Tera: We couldn't have done it without you. Thank you, TK!
+u4.well | Anderson: TK, you applied your knowledge of groundwater to determine the best location to drill our well. This allowed the team to activate the fountain and restore water to the area.
+u4.flood | Anderson: And when my underground bunker began flooding, you analyzed the porosity of the ground at the different floors and convinced me that it wouldn't stop on its own. Your quick thinking saved my life! I can't thank you enough for helping me get out alive!
+u4.soil.a | Anderson: You even used your understanding of soil infiltration to help identify the best soil type to use with our seedlings. Because of you, we have more fresh food to go around!
+u4.soil.b | Anderson: You even worked with me to help identify the best soil type to use with our seedlings.
+u4.thanks | Anderson: Your hard work is appreciated, TK!
+u5.plant.a | Aryn: Hey, TK, I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you used your excellent knowledge of evaporation and condensation to convince me that the water evaporated due to natural causes.
+u5.plant.b | Aryn: Hey, TK, I was so convinced that aliens had stolen water from my Sea WAT-er plant, but you convinced me that the water evaporated due to natural causes.
+u5.still.a | Aryn: It was also because of your incredible work that we were able to properly set up the solar still to use your knowledge of evaporation and condensation to convert sea water into drinkable water. Now we'll have the fresh water we need!
+u5.still.b | Aryn: You also did your best to help set up the solar still to use your knowledge of evaporation and condensation to convert sea water into drinkable water. Though it's not perfect yet, I know your work will help us get closer to having enough fresh water for everyone.
+u5.handoff | Aryn: I think Captain Toppo has one final thing to show you.
+end.skills | Toppo: TK, throughout this mission, you've demonstrated the skills of a scientist, an engineer, and a problem solver. Those skills changed the course of this mission.
+end.award | Toppo: Most importantly, you've shown how your understanding of water systems allowed you to make good arguments that helped us all make better decisions that ultimately affected people, ecosystems, and our entire community. On behalf of the Mission HydroSci expedition, it is my honor to recognize your contributions. I hereby award you the Planetary Water Steward award!

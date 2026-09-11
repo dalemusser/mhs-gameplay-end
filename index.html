@@ -56,20 +56,24 @@
   <div class="grid" id="grid"></div>
 
   <p class="foot">
-    <a href="ceremony_v4.html" target="_blank" rel="noopener">▶ Production default</a> — no profile parameter; the ceremony fetches real
+    <a href="ceremony.html" target="_blank" rel="noopener">▶ Production default</a> — no profile parameter; the ceremony fetches real
     scores (until that endpoint exists, it behaves like No&nbsp;Data).<br>
-    Previous layouts, kept for comparison (add <code>?profile=…</code> to launch with any card's profile):
+    Previous versions, kept for comparison (add <code>?profile=…</code> to launch with any card's profile):
+    <a href="ceremony_v6.html" target="_blank" rel="noopener">◀ v6 — as shipped in v0.1.7 (final script)</a> ·
+    <a href="ceremony_v5.html" target="_blank" rel="noopener">◀ v5 — previous script (v3 text + clips)</a> ·
+    <a href="ceremony_v4.html" target="_blank" rel="noopener">◀ v4 presentation arc</a> ·
     <a href="ceremony_v3.html" target="_blank" rel="noopener">◀ v3 dimensional stage</a> ·
     <a href="ceremony_v2.html" target="_blank" rel="noopener">◀ v2 TV stage</a> ·
-    <a href="ceremony.html" target="_blank" rel="noopener">◀ v1 holo backdrop</a><br>
-    <a href="audition.html">🎧 Audio audition</a> — every voice line, click to play, karaoke-timing check.<br>
+    <a href="ceremony_v1.html" target="_blank" rel="noopener">◀ v1 holo backdrop</a><br>
+    <a href="audition_v6.html">🎧 Audio audition</a> — every voice line of the final script (v6 clip set), click to play, karaoke-timing check
+    (<a href="audition.html">previous script's clips</a>).<br>
     Serve this folder with any static server (e.g. <code>python3 -m http.server 8000</code>) —
     fetches fail over <code>file://</code>.
   </p>
 </div>
 
 <script src="lib/resolver.js?v=2"></script>
-<script src="ceremony-definition.js?v=5"></script>
+<script src="ceremony-definition_v6.js?v=1"></script>   <!-- chips reflect the CURRENT script (ceremony.html + v6); v5 and older use ceremony-definition.js -->
 <script>
 const PROFILES = [
   { file: 'all-high', title: 'All High',
@@ -83,7 +87,7 @@ const PROFILES = [
   { file: 'boundary', title: 'Boundary',
     desc: 'Every score EXACTLY at its threshold — must play all happy variants (thresholds are ≥). Catches off-by-one bugs.' },
   { file: 'partial', title: 'Partial (through Unit 3)',
-    desc: 'Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant.' },
+    desc: 'Units 2–3 scored, Unit 4 never attempted — missing scores must fall back to the gentle variant. (DANI at 3 of 6 is below the final script\'s 4-point bar → B.)' },
   { file: 'no-data', title: 'No Data',
     desc: 'No scores at all (grader lag / never played) — the whole ceremony on fallback variants.' },
 ];
@@ -105,7 +109,7 @@ const grid = document.getElementById('grid');
 PROFILES.forEach(async p => {
   const card = document.createElement('a');
   card.className = 'card';
-  card.href = 'ceremony_v4.html?profile=' + encodeURIComponent(p.file);   // latest layout (v4: cold open, camera grammar, music, logo dressing)
+  card.href = 'ceremony.html?profile=' + encodeURIComponent(p.file);   // THE CURRENT SHOW — plain name, always (the _vN files are the frozen archive)
   card.target = '_blank'; card.rel = 'noopener';   // ceremony opens in its own tab; the launcher stays put
   card.innerHTML = '<h2>' + p.title + '</h2>'
     + '<div class="file">test-profiles/' + p.file + '.json</div>'

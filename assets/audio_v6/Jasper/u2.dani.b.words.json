@@ -1,0 +1,79 @@
+{
+  "words": [
+    {
+      "word": "When",
+      "start": 0,
+      "end": 0.313
+    },
+    {
+      "word": "DANI's",
+      "start": 0.372,
+      "end": 0.755
+    },
+    {
+      "word": "argumentation",
+      "start": 0.789,
+      "end": 1.474
+    },
+    {
+      "word": "system",
+      "start": 1.544,
+      "end": 1.858
+    },
+    {
+      "word": "was",
+      "start": 1.904,
+      "end": 2.009
+    },
+    {
+      "word": "broken,",
+      "start": 2.067,
+      "end": 2.624
+    },
+    {
+      "word": "you",
+      "start": 2.868,
+      "end": 2.972
+    },
+    {
+      "word": "worked",
+      "start": 3.019,
+      "end": 3.251
+    },
+    {
+      "word": "hard",
+      "start": 3.286,
+      "end": 3.471
+    },
+    {
+      "word": "to",
+      "start": 3.506,
+      "end": 3.564
+    },
+    {
+      "word": "identify",
+      "start": 3.634,
+      "end": 4.122
+    },
+    {
+      "word": "claims,",
+      "start": 4.203,
+      "end": 4.899
+    },
+    {
+      "word": "evidence",
+      "start": 5.05,
+      "end": 5.503
+    },
+    {
+      "word": "and",
+      "start": 5.538,
+      "end": 5.608
+    },
+    {
+      "word": "reasoning.",
+      "start": 5.666,
+      "end": 6.827
+    }
+  ]
+}

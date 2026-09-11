@@ -5,6 +5,13 @@
  *     lineId | Speaker: text
  *
  * Usage:  node tools/export-lines.cjs > tools/ceremony-lines.txt
+ *         node tools/export-lines.cjs ceremony-definition_v6.js > tools/ceremony-lines_v6.txt
+ *
+ * The optional argument is the definition file to walk (relative to the repo
+ * root; default ceremony-definition.js). Content is versioned per script —
+ * each definition has its own lines file and its own clip folder (assets/audio/,
+ * assets/audio_v6/, …)
+ * (see docs/script-v4-plan.md §2) — so pass the matching -out to mhsaudio.
  *
  * Then generate voice + word timings + the player manifest with the mhsaudio CLI
  * (built from the mhsaudiotools repo; API key in ~/.elevenlabs_key):
@@ -32,7 +39,8 @@
  * (the unit's speaker for unit sections). Throws on a missing lineId so a new
  * unvoiced line can't slip through silently.
  */
-require('../ceremony-definition.js');
+const path = require('node:path');
+require(path.resolve(process.cwd(), process.argv[2] || 'ceremony-definition.js'));
 const def = globalThis.CEREMONY_DEFINITION;
 
 const lines = [];

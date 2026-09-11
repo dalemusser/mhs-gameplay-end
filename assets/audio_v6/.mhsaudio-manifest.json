@@ -1,0 +1,206 @@
+{
+  "files": {
+    "Anderson/u4.flood.mp3": {
+      "text": "426ef4fcf1a61fa9380ad17a0c9c2b7992f453e7",
+      "voice": "tG5bw06DXQnuqEU3nPAq",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Anderson/u4.soil.a.mp3": {
+      "text": "c07ef174ee4c206726bb15ffdcc72a73055a105b",
+      "voice": "tG5bw06DXQnuqEU3nPAq",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Anderson/u4.soil.b.mp3": {
+      "text": "25a246ff97a23587ee446ea9cf1f7f7a36dffe66",
+      "voice": "tG5bw06DXQnuqEU3nPAq",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Anderson/u4.thanks.mp3": {
+      "text": "5513c8657c84b0b01875088bd9c64b20a76cae3e",
+      "voice": "tG5bw06DXQnuqEU3nPAq",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Anderson/u4.well.mp3": {
+      "text": "cfc6525fb6742aaee8a0108bb9ba24d83f198241",
+      "voice": "tG5bw06DXQnuqEU3nPAq",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Aryn/u5.handoff.mp3": {
+      "text": "0beefe5f2c3b8ba5b90dc890e366b0891b88e636",
+      "voice": "w4Z9gYJrajAuQmheNbVn",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Aryn/u5.plant.a.mp3": {
+      "text": "f8a4254b5a5a0c3f37077eb81d89584313742c32",
+      "voice": "w4Z9gYJrajAuQmheNbVn",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Aryn/u5.plant.b.mp3": {
+      "text": "053e93c544ab94d2c17469e7392d81a79f91ff3d",
+      "voice": "w4Z9gYJrajAuQmheNbVn",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Aryn/u5.still.a.mp3": {
+      "text": "64e094223ee5554322269c0e644fbb77e819c6dd",
+      "voice": "w4Z9gYJrajAuQmheNbVn",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Aryn/u5.still.b.mp3": {
+      "text": "f36285f03c172374880e59bd411e5cd0c9bb60c6",
+      "voice": "w4Z9gYJrajAuQmheNbVn",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Jasper/u2.crash.mp3": {
+      "text": "c0d780b30052e5cbbb7812c7cd3e222b674c8bfe",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Jasper/u2.dani.a.mp3": {
+      "text": "4f828db738190dcf0fcf443275f0e65745383be2",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "b9d0f2ad2b772c8d442cd0c95fea768effa36ebc"
+    },
+    "Jasper/u2.dani.b.mp3": {
+      "text": "b14106296db012a72d2b5bb2144d3eb1761fdece",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "b9d0f2ad2b772c8d442cd0c95fea768effa36ebc"
+    },
+    "Jasper/u2.find-team.a.mp3": {
+      "text": "e4d75a847dfa3a2ad4416273b3e48f57dea93313",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Jasper/u2.find-team.b.mp3": {
+      "text": "b765f8132c634c6f870bea6f47a6f068e56a1e11",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Jasper/u2.thanks.mp3": {
+      "text": "435bb65cbca895348699f769020251e6064ca691",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Jasper/u2.water.a.mp3": {
+      "text": "315174e0d3f776bde128bc6a15cced1bcaedc7d0",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Jasper/u2.water.b.mp3": {
+      "text": "cbe673bc14b87d557cc7bc41c14df5677272c4bb",
+      "voice": "YsvxlKAiTeA2VGZGnQI9",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.crates.a.mp3": {
+      "text": "883bf94452d616d20233f6d241875db44a2877ec",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.crates.b.mp3": {
+      "text": "c0b3f468ffcd6abf37ce5d5168b24f38582fd3b7",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.garden.a.mp3": {
+      "text": "6831a7d37832ab135d5c11f2e6ab45f4ec3f292b",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.garden.b.mp3": {
+      "text": "9a9344d5efab3e9e7fb3ef39b342a374cccbdd33",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.pollution.mp3": {
+      "text": "65fbf1b5400935ce719dafc4d9ed8b4808828879",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true
+    },
+    "Tera/u3.thanks.mp3": {
+      "text": "d82ff2fc090254a7efe60f110aca2f3538af18bf",
+      "voice": "98oS1BxL32fKBh1KbTej",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Toppo/end.award.mp3": {
+      "text": "06dde42f34d62452c28777a9076b5b4d98eb1118",
+      "voice": "zadbHdSgYi0Gxv83seiu",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "a3ff3421ad0fbeffab09b6b903349755153a63ed"
+    },
+    "Toppo/end.skills.mp3": {
+      "text": "1669f1b9dc31199b3a001b659a8b901355e7de14",
+      "voice": "zadbHdSgYi0Gxv83seiu",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "dict": "c35b85e431b69e1c9c590f5b349a034004d071ab"
+    },
+    "Toppo/u1.intro.mp3": {
+      "text": "8c3f7c92a9019738f68f631caf80fab927fd88eb",
+      "voice": "zadbHdSgYi0Gxv83seiu",
+      "model": "eleven_multilingual_v2",
+      "format": "mp3_44100_128",
+      "words": true,
+      "settings": "st:0.6|si:-|sy:-|b:-|sp:-",
+      "dict": "285f01d3da6861eaf63387f8c059718f9bf9c099"
+    }
+  }
+}

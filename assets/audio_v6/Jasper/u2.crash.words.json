@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "TK,",
+      "start": 0,
+      "end": 0.627
+    },
+    {
+      "word": "after",
+      "start": 0.801,
+      "end": 1.057
+    },
+    {
+      "word": "the",
+      "start": 1.103,
+      "end": 1.173
+    },
+    {
+      "word": "Copernicus",
+      "start": 1.207,
+      "end": 1.718
+    },
+    {
+      "word": "crash-landed,",
+      "start": 1.765,
+      "end": 2.519
+    },
+    {
+      "word": "our",
+      "start": 3.03,
+      "end": 3.181
+    },
+    {
+      "word": "mission",
+      "start": 3.239,
+      "end": 3.529
+    },
+    {
+      "word": "could",
+      "start": 3.587,
+      "end": 3.727
+    },
+    {
+      "word": "have",
+      "start": 3.75,
+      "end": 3.855
+    },
+    {
+      "word": "ended",
+      "start": 3.889,
+      "end": 4.11
+    },
+    {
+      "word": "right",
+      "start": 4.156,
+      "end": 4.331
+    },
+    {
+      "word": "there.",
+      "start": 4.365,
+      "end": 4.923
+    }
+  ]
+}

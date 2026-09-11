@@ -1,13 +1,18 @@
 # Ceremony Visual v2 — Presentation Redesign Plan
 
-*Status (2026-08-21): ALL STAGES SHIPPED. The full arc (Stages 1–4 plus the
+*Status (2026-09-10): ALL STAGES SHIPPED. The full arc (Stages 1–4 plus the
 rounds Dale's auditions added) went out as visual v4 (`player_v4.js?v=30`) in
-**dist/v0.1.6**, launcher flipped to v4. The WORKING pair is now
-`ceremony_v5.html` + `lib/player_v5.js` — all new changes go there (bump its
-`?v=` on every edit). v1–v4 are frozen rollbacks. Only remaining unbuilt idea
+**dist/v0.1.6**, launcher flipped to v4; the final-script v6 pair shipped as
+**dist/v0.1.7** (live 2026-09-10), launcher → v6. The WORKING pair is now the
+PLAIN pair `ceremony.html` + `lib/player.js` (lineage v7) — all new changes go
+there (bump `lib/player.js?v=N` on every edit; busters start at 100). v1–v6
+are frozen archives under `_vN` suffixes (v1 was renamed to `ceremony_v1.html`
++ `lib/player_v1.js` on 2026-09-10). Only remaining unbuilt idea
 from this plan: per-unit signature colours (Stage 3's second half), parked.
-Content (`ceremony-definition.js`, resolver, audio manifest) unchanged
-throughout. History below is the round-by-round log.*
+Content was unchanged through v1–v5; v6 introduced VERSIONED content
+(`ceremony-definition_v6.js` + `assets/audio_v6/`, the designers' final
+script v4 — see docs/script-v4-plan.md). History below is the round-by-round
+log.*
 
 ## Why
 
@@ -271,3 +276,51 @@ images; launcher→v4).
 - ?v=2 `restartShow()`: the end screen's ↺ Restart replays the FULL show incl.
   the cold open (skipping to Toppo felt like starting mid-show — Dale); Begin
   shares the same path. The R key stays the quick intro-skipping restart.
+
+## v6 (working) — final-script content round (2026-09-10)
+
+Cloned from v5 (?v=2) for the designers' FINAL script (v4): presentation
+untouched; the only player delta is `AUDIO_DIR = 'assets/audio_v6/'` with an
+on-load remap of the manifest's hardcoded `assets/audio/` prefix, so v6 plays
+the script-v4 clip set while v1–v5 keep the script-v3 set. Content details,
+tests, and the release checklist: docs/script-v4-plan.md. v5 is now the
+frozen "previous script" version (launcher footer link).
+
+- ?v=2 cold-open captions: the lower-third sat EMPTY through the tableau
+  mingle + dispersal (Dale). Now `introStatus()` → "The ceremony is about to
+  begin." with a smaller "♪ Music playing" note (only while the m1 cue is
+  actually loaded — TV-caption honesty), set from `restartShow()` so Begin
+  and ↺ Restart both get it; Toppo's first line replaces it as before.
+  `walkStatus()` now shares the `setStatus(text, note)` helper.
+- ?v=3 hand-off captions (Dale's follow-up): "Walking to the stage." now carries
+  the same audio notes — "♪ Music playing · Applause" during the walk (groove +
+  welcome applause), dropping to "Applause" at arrival since the groove has
+  faded by then (`walkNote(arrived)`, re-set from the arrival block); each part
+  is listed only while its sound is actually available. Verified sequence:
+  walk 0–6.7s both notes → arrival "Applause" → line at +1.3s settle.
+
+## v7 round (working) — 2026-09-10, after v0.1.7 went live
+
+Clone of v6 (?v=3): presentation and content identical (still
+`ceremony-definition_v6.js` + `assets/audio_v6/`). v6 is frozen as shipped in
+dist/v0.1.7.
+
+**First item — the naming fix.** v0.1.7's student-facing URL was
+`…/v0.1.7/ceremony_v6.html`: three unrelated counters (release folder,
+player lineage `_vN`, designers' script vN) had leaked into one path, and the
+first two only ever looked related by coincidence (v5 never shipped alone).
+New convention: the plain names `ceremony.html` + `lib/player.js` ARE the
+current show and are what every release ships at `…/vX.Y.Z/ceremony.html`;
+the `_vN` pairs are the frozen comparison archive. Mechanics: the original v1
+files moved to `ceremony_v1.html` + `lib/player_v1.js` (its include updated,
+buster kept at ?v=5); the v7 working pair took the plain names with
+`lib/player.js?v=100` (a buster the retired v1 player never used, so no
+cached collision); the launcher's cards + Production default point at
+`ceremony.html`, footer lists v6 → v1. At each future ship, right after
+staging, SNAPSHOT the plain pair to `ceremony_vN.html` + `lib/player_vN.js`
+(N = the lineage number in the player header) and keep working on the plain
+pair — the inverse of the old "clone the working pair after staging". Frozen
+players v2–v6 still say "v1 lives in lib/player.js" in their headers; they
+were deliberately not touched (byte-identical to what shipped). Safe because
+each CDN folder is immutable and self-contained — `ceremony.html` = v1 in
+v0.1.3–v0.1.7 forever, = the current show from v0.1.8 on.

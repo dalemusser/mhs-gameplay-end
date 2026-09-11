@@ -1,0 +1,74 @@
+{
+  "words": [
+    {
+      "word": "Thank",
+      "start": 0,
+      "end": 0.29
+    },
+    {
+      "word": "you",
+      "start": 0.348,
+      "end": 0.453
+    },
+    {
+      "word": "for",
+      "start": 0.522,
+      "end": 0.65
+    },
+    {
+      "word": "everything",
+      "start": 0.72,
+      "end": 1.08
+    },
+    {
+      "word": "you",
+      "start": 1.126,
+      "end": 1.196
+    },
+    {
+      "word": "did,",
+      "start": 1.265,
+      "end": 1.451
+    },
+    {
+      "word": "TK.",
+      "start": 1.474,
+      "end": 2.078
+    },
+    {
+      "word": "Tera's",
+      "start": 2.519,
+      "end": 2.891
+    },
+    {
+      "word": "been",
+      "start": 2.937,
+      "end": 3.077
+    },
+    {
+      "word": "waiting",
+      "start": 3.111,
+      "end": 3.355
+    },
+    {
+      "word": "to",
+      "start": 3.39,
+      "end": 3.448
+    },
+    {
+      "word": "thank",
+      "start": 3.506,
+      "end": 3.704
+    },
+    {
+      "word": "you",
+      "start": 3.762,
+      "end": 3.855
+    },
+    {
+      "word": "too.",
+      "start": 3.924,
+      "end": 4.458
+    }
+  ]
+}

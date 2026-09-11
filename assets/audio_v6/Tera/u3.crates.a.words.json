@@ -1,0 +1,184 @@
+{
+  "words": [
+    {
+      "word": "When",
+      "start": 0,
+      "end": 0.174
+    },
+    {
+      "word": "I",
+      "start": 0.209,
+      "end": 0.232
+    },
+    {
+      "word": "needed",
+      "start": 0.267,
+      "end": 0.488
+    },
+    {
+      "word": "help",
+      "start": 0.534,
+      "end": 0.685
+    },
+    {
+      "word": "getting",
+      "start": 0.731,
+      "end": 0.929
+    },
+    {
+      "word": "my",
+      "start": 0.964,
+      "end": 1.033
+    },
+    {
+      "word": "lost",
+      "start": 1.091,
+      "end": 1.312
+    },
+    {
+      "word": "equipment",
+      "start": 1.358,
+      "end": 1.683
+    },
+    {
+      "word": "crates",
+      "start": 1.718,
+      "end": 1.962
+    },
+    {
+      "word": "back",
+      "start": 2.02,
+      "end": 2.183
+    },
+    {
+      "word": "to",
+      "start": 2.218,
+      "end": 2.276
+    },
+    {
+      "word": "my",
+      "start": 2.322,
+      "end": 2.392
+    },
+    {
+      "word": "base,",
+      "start": 2.45,
+      "end": 2.926
+    },
+    {
+      "word": "you",
+      "start": 3.251,
+      "end": 3.344
+    },
+    {
+      "word": "used",
+      "start": 3.413,
+      "end": 3.611
+    },
+    {
+      "word": "what",
+      "start": 3.646,
+      "end": 3.773
+    },
+    {
+      "word": "you",
+      "start": 3.82,
+      "end": 3.901
+    },
+    {
+      "word": "knew",
+      "start": 3.947,
+      "end": 4.087
+    },
+    {
+      "word": "about",
+      "start": 4.145,
+      "end": 4.365
+    },
+    {
+      "word": "surface",
+      "start": 4.423,
+      "end": 4.76
+    },
+    {
+      "word": "water",
+      "start": 4.795,
+      "end": 5.097
+    },
+    {
+      "word": "flowing",
+      "start": 5.608,
+      "end": 5.956
+    },
+    {
+      "word": "from",
+      "start": 6.002,
+      "end": 6.142
+    },
+    {
+      "word": "upper",
+      "start": 6.223,
+      "end": 6.478
+    },
+    {
+      "word": "to",
+      "start": 6.548,
+      "end": 6.618
+    },
+    {
+      "word": "lower",
+      "start": 6.687,
+      "end": 6.896
+    },
+    {
+      "word": "elevations",
+      "start": 6.954,
+      "end": 7.605
+    },
+    {
+      "word": "and",
+      "start": 7.651,
+      "end": 7.732
+    },
+    {
+      "word": "topography",
+      "start": 7.767,
+      "end": 8.464
+    },
+    {
+      "word": "to",
+      "start": 8.905,
+      "end": 9.033
+    },
+    {
+      "word": "safely",
+      "start": 9.125,
+      "end": 9.474
+    },
+    {
+      "word": "float",
+      "start": 9.532,
+      "end": 9.741
+    },
+    {
+      "word": "them",
+      "start": 9.787,
+      "end": 9.903
+    },
+    {
+      "word": "down",
+      "start": 9.961,
+      "end": 10.112
+    },
+    {
+      "word": "the",
+      "start": 10.147,
+      "end": 10.217
+    },
+    {
+      "word": "river.",
+      "start": 10.263,
+      "end": 10.82
+    }
+  ]
+}

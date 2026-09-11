@@ -1,0 +1,89 @@
+{
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.174
+    },
+    {
+      "word": "even",
+      "start": 0.255,
+      "end": 0.464
+    },
+    {
+      "word": "worked",
+      "start": 0.534,
+      "end": 0.801
+    },
+    {
+      "word": "with",
+      "start": 0.824,
+      "end": 0.975
+    },
+    {
+      "word": "me",
+      "start": 1.033,
+      "end": 1.207
+    },
+    {
+      "word": "to",
+      "start": 1.277,
+      "end": 1.37
+    },
+    {
+      "word": "help",
+      "start": 1.451,
+      "end": 1.649
+    },
+    {
+      "word": "identify",
+      "start": 1.718,
+      "end": 2.252
+    },
+    {
+      "word": "the",
+      "start": 2.322,
+      "end": 2.392
+    },
+    {
+      "word": "best",
+      "start": 2.461,
+      "end": 2.705
+    },
+    {
+      "word": "soil",
+      "start": 2.763,
+      "end": 3.077
+    },
+    {
+      "word": "type",
+      "start": 3.158,
+      "end": 3.46
+    },
+    {
+      "word": "to",
+      "start": 3.506,
+      "end": 3.587
+    },
+    {
+      "word": "use",
+      "start": 3.704,
+      "end": 3.913
+    },
+    {
+      "word": "with",
+      "start": 3.947,
+      "end": 4.087
+    },
+    {
+      "word": "our",
+      "start": 4.122,
+      "end": 4.226
+    },
+    {
+      "word": "seedlings.",
+      "start": 4.296,
+      "end": 5.341
+    }
+  ]
+}
