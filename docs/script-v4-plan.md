@@ -4,9 +4,21 @@
 > `https://cdn.adroit.games/mhs/end/v0.1.7/index.html` — post-upload CDN sweep
 > 139/139 = 200 (sizes match local), live launcher chips + `ceremony_v6.html`
 > (cold open → Toppo → first hand-off, clips from `audio_v6/`) verified in the
-> browser with zero console errors. **v7 cloned** as the next working pair
-> (`ceremony_v7.html` + `lib/player_v7.js?v=1`, content still shared with v6);
-> v6 is frozen as shipped. Round closed. Uncommitted — Dale commits.
+> browser with zero console errors. v6 is frozen as shipped. **Round closed
+> and committed + pushed as 871d14e** (2026-09-10).
+>
+> **Working pair after this round = the PLAIN pair `ceremony.html` +
+> `lib/player.js` (lineage v7, `?v=100`)**, per the naming convention adopted
+> the same night (docs/visual-v2-plan.md, "v7 round"): the plain names are the
+> current show and what every release ships at `…/vX.Y.Z/ceremony.html`; the
+> `_vN` pairs are the frozen archive (v1 renamed to `ceremony_v1.html` +
+> `lib/player_v1.js`). Next ship: stage dist/v0.1.8, then SNAPSHOT the plain
+> pair to `ceremony_v7.html` + `lib/player_v7.js` and keep working on the
+> plain pair. Content for the plain pair is still `ceremony-definition_v6.js`
+> + `assets/audio_v6/`.
+>
+> **2026-09-13: work ON HOLD** — the Partial / No-Data question is with the
+> designers (docs/partial-nodata-plan.md); nothing changes until they answer.
 >
 > Earlier status (staging): STAGED as dist/v0.1.7 — awaiting Dale's upload.
 > 139 files (v0.1.6's 105 + the v5 pair, the v6 pair, `ceremony-definition_v6.js`,
