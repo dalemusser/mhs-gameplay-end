@@ -16,6 +16,9 @@ Planetary Water Steward award.
   `tools/export-lines.cjs`).
 - **Tests:** `node tests/resolver.test.cjs`; `tests/late-binding.html` is the
   Playwright harness for the embed.
+- **Assets:** `tools/optimize.sh <originals>` re-derives the shipped assets (clips,
+  textures, audio, images) from the originals (git tag `assets-original`);
+  see `docs/v0.2.0-plan.md`.
 - **Release:** `tools/stage-dist.sh <version>` stages `dist/v<version>/`
   (current show only); upload to the CDN's `mhs/end/v<version>/` folder;
   folders are immutable. History and decisions: `docs/`.

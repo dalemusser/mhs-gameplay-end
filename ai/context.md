@@ -30,8 +30,10 @@ scores endpoint. Contract: `docs/embed-api.md`. Integration plan:
 - `assets/` — characters (GLB), holo images, logo, music, sfx, env textures.
 - `ceremony_v1…v6.html`, `lib/player_v1…v6.js`, `ceremony-definition.js`,
   `assets/audio/` — frozen comparison archive (repo only, not shipped).
-- `tools/` — `stage-dist.sh` (release staging), `export-lines.cjs` +
-  `voices.json` (voice generation input for `mhsaudiotools`).
+- `tools/` — `stage-dist.sh` (release staging), `optimize.sh` + `optimize/`
+  (asset pipeline: clips, WebP textures, audio bitrates, images; originals at
+  git tag `assets-original`), `export-lines.cjs` + `voices.json` (voice
+  generation input for `mhsaudiotools`).
 - `docs/` — plans and decisions per release; `designer-content/` — the
   designers' scripts and the EA working doc (vendored copies).
 - `dist/` — staged release folders (git-ignored; `dist/v0.1.7` is what is live).
@@ -55,7 +57,9 @@ v0.1.8 (embed, late binding, vendored runtime, exit control, garden bar 2.5)
 went live on the CDN 2026-09-22 (`docs/v0.1.8-plan.md`; player archived as
 `_v7`) and froze on the stratahub host page at Toppo's first line: v0.1.9
 (`docs/v0.1.9-plan.md`) fixed it with CORS image loads (player v8, archived
-as `_v8`) and is live and selected on Dev MHS since 2026-09-22. Next: stratahub's host page against
+as `_v8`) and is live and selected on Dev MHS since 2026-09-22. v0.2.0
+(`docs/v0.2.0-plan.md`) is the optimized bundle (71 → ~38 MB), staged the
+same day. Next: stratahub's host page against
 `docs/embed-api.md`, then the size work (animation clips, normal maps, audio
 bitrates) as v0.1.9.
 Grader-side EA scores and open team questions:
