@@ -52,8 +52,9 @@ scores endpoint. Contract: `docs/embed-api.md`. Integration plan:
 ## Status (2026-09-21)
 
 v0.1.8 (embed, late binding, vendored runtime, exit control, garden bar 2.5)
-is LIVE on the CDN since 2026-09-22 (`docs/v0.1.8-plan.md`); the shipped
-player is archived as `_v7`. Next: stratahub's host page against
+went live on the CDN 2026-09-22 (`docs/v0.1.8-plan.md`; player archived as
+`_v7`) and froze on the stratahub host page at Toppo's first line: v0.1.9
+(`docs/v0.1.9-plan.md`) fixes it with CORS image loads (player v8). Next: stratahub's host page against
 `docs/embed-api.md`, then the size work (animation clips, normal maps, audio
 bitrates) as v0.1.9.
 Grader-side EA scores and open team questions:

@@ -97,6 +97,16 @@ row dark. Nothing waits on grading.
 `variants` is `{ sectionId: lineId }`, the resolved variant set (which A/B
 line each section played), for logging.
 
+## Hosting requirement: CORS
+
+Every asset the bundle loads — models, textures, the environment map, audio
+manifests, and (since v0.1.9) the holo images — is loaded as a CORS request,
+so when the host page's origin differs from where the files are ultimately
+served (stratahub's content path redirects to the CDN), the CDN must allow
+that origin. Without it the models fail to load and, before v0.1.9, the show
+froze at the first holo image because the wall canvas was tainted. Pages
+served from the CDN itself are same-origin and need nothing.
+
 ## Failure behaviour
 
 If WebGL is unavailable or a bundle file cannot load, the embed shows a plain
