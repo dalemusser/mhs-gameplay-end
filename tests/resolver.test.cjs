@@ -7,11 +7,12 @@
  * versioned per designer script — docs/script-v4-plan.md §2):
  *   ceremony-definition.js     script v3 · assets/audio/     · ceremony_v1.html … ceremony_v5.html (frozen)
  *   ceremony-definition_v6.js  script v4 · assets/audio_v6/  · ceremony_v6.html (current)
- * They differ ONLY in 12 line texts and u2.dani's U2.C5 threshold (2 → 4); a
- * test pins exactly that, so an accidental edit to the frozen file shows up.
+ * They differ ONLY in 12 line texts, u2.dani's U2.C5 threshold (2 → 4) and,
+ * since 2026-09-21, u3.garden's U3.C5 threshold (3 → 2.5); a test pins exactly
+ * that, so an accidental edit to the frozen file shows up.
  */
 const assert = require('node:assert');
-const { resolve, evalCondition } = require('../lib/resolver.js');
+const { resolve, evalCondition, rebindUnit, rebindStars, variants: variantMap } = require('../lib/resolver.js');
 require('../ceremony-definition.js');                 // assigns globalThis.CEREMONY_DEFINITION
 const REAL_V3 = globalThis.CEREMONY_DEFINITION;
 require('../ceremony-definition_v6.js');              // re-assigns it
@@ -19,9 +20,9 @@ const REAL_V6 = globalThis.CEREMONY_DEFINITION;
 assert.notStrictEqual(REAL_V3, REAL_V6, 'both definitions must load as distinct objects');
 const VERSIONS = [
   { tag: 'v3-script', def: REAL_V3, manifest: '../assets/audio/ceremony_audio.json',
-    daniBar: 2, partialSuffixes: ['b', 'a', 'a', 'a', 'b', 'b', 'b', 'b'] },
+    daniBar: 2, gardenBar: 3, partialSuffixes: ['b', 'a', 'a', 'a', 'b', 'b', 'b', 'b'] },
   { tag: 'v4-script', def: REAL_V6, manifest: '../assets/audio_v6/ceremony_audio.json',
-    daniBar: 4, partialSuffixes: ['b', 'b', 'a', 'a', 'b', 'b', 'b', 'b'] },   // partial's U2.C5 = 3 → below the new bar
+    daniBar: 4, gardenBar: 2.5, partialSuffixes: ['b', 'b', 'a', 'a', 'b', 'b', 'b', 'b'] },   // partial's U2.C5 = 3 → below the new bar; its U3.C5 = 1 → B either way
 ];
 const SCRIPT_V4_REWRITES = [
   'u2.find-team.a', 'u2.dani.a', 'u2.dani.b', 'u2.water.a', 'u2.water.b',
@@ -196,7 +197,17 @@ for (const V of VERSIONS) {
   });
 }
 
-test('v6 definition differs from the frozen v3-script one ONLY in the 12 rewrites + the DANI bar', () => {
+for (const V of VERSIONS) {
+  test(V.tag + ': u3.garden bar is U3.C5 ≥ ' + V.gardenBar + ' (three correct plots + one wrong = 2.5)', () => {
+    const garden = n => variantOf(resolve(V.def, scores({ 'U3.C5': { score: n, max: 4 } })), 'u3.garden');
+    assert.strictEqual(garden(V.gardenBar), 'u3.garden.a');
+    assert.strictEqual(garden(V.gardenBar - 0.01), 'u3.garden.b');
+    assert.strictEqual(garden(2.5), V.gardenBar === 2.5 ? 'u3.garden.a' : 'u3.garden.b');
+    assert.strictEqual(garden(4), 'u3.garden.a');
+  });
+}
+
+test('v6 definition differs from the frozen v3-script one ONLY in the 12 rewrites + the DANI and garden bars', () => {
   const texts = def => { const m = {}; const add = b => { if (b && b.lineId) m[b.lineId] = b.text; };
     (def.intro || []).forEach(add);
     def.units.forEach(u => u.sections.forEach(s => { if (s.always) add(s.always); (s.conditions || []).forEach(v => add(v.beat)); }));
@@ -210,7 +221,8 @@ test('v6 definition differs from the frozen v3-script one ONLY in the 12 rewrite
   // structure apart from text: holo images, expressions, highlights, celebration identical
   const strip = def => JSON.parse(JSON.stringify(def, (k, v) => (k === 'text' ? undefined : v)));
   const sa = strip(REAL_V3), sb = strip(REAL_V6);
-  sa.units[0].sections[2].conditions[0].when.value = 4;                        // the one allowed structural delta
+  sa.units[0].sections[2].conditions[0].when.value = 4;                        // the two allowed structural deltas
+  sa.units[1].sections[2].conditions[0].when.value = 2.5;
   assert.deepStrictEqual(sa, sb);
 });
 
@@ -273,6 +285,53 @@ test('evalCondition ops behave (>, <=, ==)', () => {
 
 test('malformed condition throws (authoring error, not silent skip)', () => {
   assert.throws(() => evalCondition({ item: 'X', op: '!=', value: 1 }, {}));
+});
+
+// ---- late binding (v0.1.8): scores arriving while the show runs ----
+test('rebindUnit re-resolves only that unit, in place, keeping the beat count and positions', () => {
+  const r = resolve(REAL_V6, scores({}));                       // no scores yet: every B
+  const before = r.beats.map(b => b.lineId);
+  const idx3 = r.beats.findIndex(b => b.unitId === 'unit3');
+  assert.strictEqual(rebindUnit(r, REAL_V6, 'unit3', ALL_HIGH), true);
+  assert.strictEqual(r.beats.length, 20);
+  assert.strictEqual(r.beats.findIndex(b => b.unitId === 'unit3'), idx3);
+  assert.strictEqual(variantOf(r, 'u3.crates'), 'u3.crates.a');
+  assert.strictEqual(variantOf(r, 'u3.garden'), 'u3.garden.a');
+  assert.strictEqual(variantOf(r, 'u2.find-team'), 'u2.find-team.b');   // unit 2 untouched
+  assert.strictEqual(variantOf(r, 'u4.soil'), 'u4.soil.b');             // unit 4 untouched
+  r.beats.forEach((b, i) => { if (b.unitId !== 'unit3') assert.strictEqual(b.lineId, before[i]); });
+  assert.strictEqual(r.beats.find(b => b.sectionId === 'u3.crates').speaker, 'Tera');
+});
+
+test('rebindUnit is a no-op (false) when the scores change nothing; unknown unit → false', () => {
+  const r = resolve(REAL_V6, ALL_HIGH);
+  assert.strictEqual(rebindUnit(r, REAL_V6, 'unit3', ALL_HIGH), false);
+  assert.strictEqual(rebindUnit(r, REAL_V6, 'unit9', ALL_HIGH), false);
+  assert.strictEqual(rebindUnit(r, REAL_V6, 'unit3', scores({})), true);   // scores can also go away → B
+  assert.strictEqual(variantOf(r, 'u3.crates'), 'u3.crates.b');
+});
+
+test('rebindStars refreshes the ending beat and reports whether anything changed', () => {
+  const r = resolve(REAL_V6, scores({}));
+  assert.deepStrictEqual(r.beats[19].stars, {});
+  assert.strictEqual(rebindStars(r, PARTIAL), true);
+  assert.deepStrictEqual(r.beats[19].stars, { unit2: 2, unit3: 2 });
+  assert.strictEqual(rebindStars(r, PARTIAL), false);
+  assert.strictEqual(rebindStars(r, ALL_HIGH), true);
+  assert.deepStrictEqual(r.beats[19].stars, { unit2: 3, unit3: 3, unit4: 3, unit5: 3 });
+  assert.strictEqual(rebindStars(r, { items: {}, stars: { unit2: 'x' } }), true);   // non-numbers are dropped
+  assert.deepStrictEqual(r.beats[19].stars, {});
+});
+
+test('a full late-binding pass (rebind every unit + stars) equals a fresh resolve', () => {
+  const r = resolve(REAL_V6, scores({}));
+  for (const u of REAL_V6.units) rebindUnit(r, REAL_V6, u.id, MIXED_A);
+  rebindStars(r, MIXED_A);
+  const fresh = resolve(REAL_V6, MIXED_A);
+  assert.deepStrictEqual(r.beats.map(b => b.lineId), fresh.beats.map(b => b.lineId));
+  assert.deepStrictEqual(r.beats[19].stars, fresh.beats[19].stars);
+  assert.deepStrictEqual(variantMap(r), variantMap(fresh));
+  assert.strictEqual(Object.keys(variantMap(r)).length, 18);          // every text beat inside a unit (5+4+4+3+2)
 });
 
 console.log('all ' + passed + ' resolver tests passed');

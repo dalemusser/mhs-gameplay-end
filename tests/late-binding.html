@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceremony — late-binding harness</title>
+<link rel="icon" href="data:,">
+</head>
+<body>
+<!-- Playwright harness for docs/embed-api.md's late binding: serve the repo root,
+     mock /api/ea-scores (pending → ready) with playwright-cli route, mount here,
+     jump between units with the dev beat selector, and read window.__events /
+     window.__script. Not shipped (tests/ is excluded from dist). -->
+<script src="../lib/embed.js?v=1"></script>
+<script>
+window.__events = [];
+window.__handle = MHSCeremony.mount(document.body, {
+  scoresUrl: '/api/ea-scores',
+  pollMs: 1000,
+  returnUrl: '../index.html',
+  exitLabel: 'Back to the launcher',
+  dev: true,
+  onEvent: function (name, detail) { window.__events.push({ name: name, detail: JSON.parse(JSON.stringify(detail)) }); },
+});
+</script>
+</body>
+</html>

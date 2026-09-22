@@ -37,8 +37,11 @@
  *    ending celebration last; `finale` is unused.
  *
  * Still provisional: "Planetary Water Steward" title pending designer sign-off;
- * U2.C3 composition question open (docs/designer-question-u2c3.md) — neither
- * affects this file's logic.
+ * U2.C3 composition decided provisionally as Tera + Aryn (grader side; this
+ * file just sums the two keys). 2026-09-21: u3.garden's bar moved 3 → 2.5 so
+ * three correct plots with one wrong planting earn the warmer line, matching
+ * the rubric's on-track band (mhsgrading/docs/ea-scores-team-questions-2026-09.md
+ * D5). The audio clips did not change.
  */
 (typeof window !== 'undefined' ? window : globalThis).CEREMONY_DEFINITION = {
   layout: {
@@ -157,7 +160,7 @@
         // superfruit garden plots — U3.C5 (designer-confirmed; the v1 script's "C4" was a typo)
         { id: 'u3.garden',
           conditions: [
-            { when: { item: 'U3.C5', op: '>=', value: 3 },
+            { when: { item: 'U3.C5', op: '>=', value: 2.5 },   // 2026-09-21: was 3; "3 correct plots" = 3 − ½ for the wrong one (mhsgrading/docs/ea-scores-team-questions-2026-09.md D5)
               beat: {
                 lineId: 'u3.garden.a', expression: 'happy',
                 text: "Later, when our food supply was running low, you figured out the best places to plant superfruit using what you knew about how dissolved materials move through watersheds. Your decisions allowed the plants to thrive and produce enough food to support the mission!",
