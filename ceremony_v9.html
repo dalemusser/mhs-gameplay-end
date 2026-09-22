@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Mission HydroSci — Final Ceremony (v9 archive)</title>
+<link rel="icon" href="data:,">
+</head>
+<body>
+<!-- FROZEN ARCHIVE: the v9 player exactly as shipped in dist/v0.2.0 (live
+     2026-09-22, the optimized asset set). Repo-only comparison page, never staged. The embed loads
+     lib/player_v7.js instead of the working lib/player.js. -->
+<script src="lib/embed.js?v=1"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  MHSCeremony.mount(document.body, {
+    player: 'lib/player_v9.js',
+    profile: q.get('profile') || undefined,
+    dev: q.has('dev'),
+    onEvent: function (name, detail) { console.log('ceremony:' + name, detail); },
+  });
+})();
+</script>
+</body>
+</html>
