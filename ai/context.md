@@ -59,7 +59,10 @@ went live on the CDN 2026-09-22 (`docs/v0.1.8-plan.md`; player archived as
 (`docs/v0.1.9-plan.md`) fixed it with CORS image loads (player v8, archived
 as `_v8`) and is live and selected on Dev MHS since 2026-09-22. v0.2.0
 (`docs/v0.2.0-plan.md`) is the optimized bundle (71 → 37 MB), live and
-selected on Dev MHS since 2026-09-22 (player archived as `_v9`). Next: stratahub's host page against
+selected on Dev MHS since 2026-09-22 (player archived as `_v9`). v0.2.1
+(`docs/v0.2.1-plan.md`) adds `autostart` (the show begins on arrival when the
+browser allows sound; Begin stays as the fallback), live 2026-09-25 (player
+archived as `_v10`; the plain files are the v11 working copy). Next: stratahub's host page against
 `docs/embed-api.md`, then the size work (animation clips, normal maps, audio
 bitrates) as v0.1.9.
 Grader-side EA scores and open team questions:
