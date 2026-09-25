@@ -38,6 +38,7 @@ the container. Pass `document.body` or a full-viewport element.
 | `onExit` | Instead of `returnUrl`: a function called when Exit is clicked. |
 | `exitLabel` | Text of the Exit control (default "Exit"). |
 | `dev` | `true` shows the reviewer's beat selector and the F/R hint (same as `?dev=1`). |
+| `autostart` | `true` starts the show as soon as the bundle is ready, without the Begin click, when the browser lets the page play sound (a silent probe decides). When it does not, the Begin button stays as the gesture, with a "Tap Begin to start." note. StrataHub passes it on every arrival (v0.2.1). |
 | `definition` | Path of the content definition to load (default `ceremony-definition_v6.js`); for the harness only. |
 | `player` | Path of the player to load instead of `lib/player.js` (a frozen `lib/player_vN.js` for side-by-side comparison); for the harness only. |
 | `onEvent(name, detail)` | Event callback, see below. |

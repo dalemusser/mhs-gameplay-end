@@ -15,15 +15,17 @@
        ?profile=<name>  → a sample student from test-profiles/ (index.html lists them)
        no parameter     → no scores: every section plays its B variant, dark stars
        ?dev=1           → the beat selector (jump anywhere)
+       ?autostart=1     → begin without the Begin click where the browser allows sound (what StrataHub passes)
      The production host page (stratahub, /missionhydrosci/ceremony) mounts the
      same embed with scoresUrl + returnUrl instead. -->
-<script src="lib/embed.js?v=1"></script>
+<script src="lib/embed.js?v=2"></script>
 <script>
 (function () {
   var q = new URLSearchParams(location.search);
   MHSCeremony.mount(document.body, {
     profile: q.get('profile') || undefined,
     dev: q.has('dev'),
+    autostart: q.has('autostart'),
     onEvent: function (name, detail) { console.log('ceremony:' + name, detail); },
   });
 })();
